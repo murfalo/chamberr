@@ -9,7 +9,8 @@ setup(
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/murfalo/chamber",
-    packages=find_packages(),
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
     install_requires=[
         "parmed",
         # "ambertools",  # must install with conda :(
@@ -23,7 +24,7 @@ setup(
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "chamber=src.chamber:main",
+            "chamber=chamber.__main__:main",
         ],
     },
 )

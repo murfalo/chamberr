@@ -25,14 +25,14 @@ from pathlib import Path
 def main():
     # Set up argument parsing
     parser = argparse.ArgumentParser(
+        prog="chamber",
         description="Convert Amber leaprc files to CHARMM-readable formats.  "
         "Matches a leaprc of the form "
-        "`$AMBERHOME/dat/leap/cmd/leaprc.{leaprc_source}.`"
+        "`$AMBERHOME/dat/leap/cmd/leaprc.{leaprc_source}.`",
     )
     parser.add_argument(
         "leaprc_source",
-        help="Name of the leaprc file to convert (without the 'leaprc.' "
-        "prefix)",
+        help="Name of the leaprc file to convert (without the 'leaprc.' " "prefix)",
     )
     parser.add_argument(
         "--only_unique",
@@ -59,20 +59,13 @@ def main():
     # NOTE(MCA): ParmEd does not have an API for merging leaprcs, so I took a
     #            manual approach and directly combine them before loading the
     #            merged copy.
-    print(
-        f"Creating combined (protein.ff14SB, RNA.OL3, + {leaprc_source})"
-        "leaprcs"
-    )
+    print(f"Creating combined (protein.ff14SB, RNA.OL3, + {leaprc_source})" "leaprcs")
     combined_leaprc_file = StringIO()
 
     amber_leaprc_cmd_path = amber_home_path / "dat" / "leap" / "cmd"
-    amber_leaprc_protein_ff14SB_path = (
-        amber_leaprc_cmd_path / "leaprc.protein.ff14SB"
-    )
+    amber_leaprc_protein_ff14SB_path = amber_leaprc_cmd_path / "leaprc.protein.ff14SB"
     amber_leaprc_rna_OL3_path = amber_leaprc_cmd_path / "leaprc.RNA.OL3"
-    amber_leaprc_source_path = (
-        amber_leaprc_cmd_path / f"leaprc.{leaprc_source}"
-    )
+    amber_leaprc_source_path = amber_leaprc_cmd_path / f"leaprc.{leaprc_source}"
 
     combined_leaprc_paths = [
         amber_leaprc_protein_ff14SB_path,
@@ -187,9 +180,7 @@ def main():
     charmm_paths = [charmm_str_path, charmm_prm_path, charmm_rtf_path]
 
     combined_atom_types_regex = re.compile(
-        r"(?:^|\s)("
-        + "|".join(map(re.escape, combined_atom_types))
-        + r")(?:\s|$)"
+        r"(?:^|\s)(" + "|".join(map(re.escape, combined_atom_types)) + r")(?:\s|$)"
     )
     new_atom_types_regex = re.compile(
         r"(?:^|\s)(" + "|".join(map(re.escape, new_atom_types)) + r")(?:\s|$)"
