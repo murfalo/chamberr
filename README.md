@@ -1,10 +1,8 @@
 # chamber: Convert Amber to CHARMM Force Fields
 
-This repository uses [parmed](https://github.com/parmed/parmed) to convert Amber forcefields to CHARMM-readable formats (.prm, .rtf, and .str).
+This repository uses [ParmEd](https://github.com/parmed/parmed) to convert Amber forcefields to CHARMM-readable formats (.prm, .rtf, and .str).
 
 ## Getting Started
-
-Install dependencies to a `conda` environment, activate said environment, then run:
 
 ``` bash
 > mamba env create -f environment.yaml
@@ -31,5 +29,5 @@ You can now utilize the generated `modrna08.prm`, `modrna08.rtf`, and/or `modrna
 ## Limitations
 
 - ParmEd does not support exporting full topologies.  You will need to create your own.  In most cases, you can steal existing CHARMM topologies for your molecules and convert their atom types to those used by Amber.
-- For unclear reasons, some types (CU, FE, and Se) remain poorly defined even after loading these baseline forcefields.  Their definitions may be found elsewhere, but I do not use them so I simply discard them.  Feel free to fix this if you are in need!
+- For reasons unclear to me, some types (CU, FE, and Se) remain poorly defined even after loading these baseline forcefields.  Their definitions may be found elsewhere, but I do not use them so I simply discard them.  Feel free to fix this if you are in need!
 
