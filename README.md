@@ -13,6 +13,17 @@ Install dependencies to a `conda` environment, activate said environment, then r
 > chamber -h
 ```
 
+
+## Examples
+
+To get the forcefield terms associated with new atom types in the `modrna08` Amber forcefield:
+
+```bash
+> chamber --only_unique modrna08
+```
+
+You can now utilize the generated `modrna08.prm`, `modrna08.rtf`, and/or `modrna08.str` files to extend the officially distributed `parm14sb_all.prm` parameters and `parm14sb_all.rtf` topologies in your CHARMM scripts!
+
 ## Notes
 
 - Currently, protein.ff14SB and RNA.OL3 are used as a "baseline".  Feel free to expand this to suit the needs of your desired forcefield.
