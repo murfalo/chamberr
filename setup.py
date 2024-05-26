@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
     name="chamber",
@@ -12,7 +12,9 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     install_requires=[
-        "parmed",
+        # Requires custom for of ParmEd pending upstream merge (see
+        # `README.md`)
+        # "parmed",
         # "ambertools",  # must install with conda :(
     ],
     classifiers=[
@@ -28,4 +30,3 @@ setup(
         ],
     },
 )
-

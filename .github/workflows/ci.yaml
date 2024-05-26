@@ -1,0 +1,61 @@
+# Continuous integration for Chamber
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    # Rationale: MacOS 13 is Unix-like and has the most CPUs/memory available 
+    # of the GitHub hosted runners for private repositories.  Switching to 
+    # `ubuntu-latest` would make the most sense if the repo ever becomes 
+    # public.
+    # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
+    runs-on: macos-13
+
+    steps:
+    - name: Check out the Chamber repository
+      uses: actions/checkout@v3
+
+    - name: Set up chamber conda environment
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        auto-update-conda: true
+        environment-file: environment.yaml
+        activate-environment: chamber
+        miniconda-version: "latest"
+
+    - name: Initialize conda
+      shell: bash -l {0}
+      run: |
+        conda init bash
+
+    # Check and install github.com/murfalo/ParmEd pending upstream merge of
+    # required bugfixes.
+    - name: Configure ParmEd
+      shell: bash -l {0}
+      run: |
+        conda activate chamber
+        git clone https://github.com/murfalo/ParmEd
+        cd ParmEd
+        bash -ex devtools/ci/install.sh
+        pip install .
+
+    - name: Configure Chamber
+      shell: bash -l {0}
+      run: |
+        conda activate chamber
+        pip install .
+        chamber -h
+
+    - name: Run unit tests
+      shell: bash -l {0}
+      run: |
+        conda activate chamber
+        # Save time by running as many tests in parallel as possible
+        rm -r ParmEd
+        pytest
+

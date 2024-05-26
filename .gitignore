@@ -3,6 +3,8 @@
 ###############################################################################
 # Ignore generated toppar files
 /toppar/
+chamber_modrna08.str
+chamber_ff14sb.str
 
 ###############################################################################
 # Python ignores
@@ -17,4 +19,6 @@ build/
 # Virtual environments
 venv/
 .env
+# PyCharm
+/.idea
 
