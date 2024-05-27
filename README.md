@@ -37,7 +37,7 @@ The force fields themselves are located at `$AMBERHOME/dat/leap/cmd/leaprc.*`.  
 
 ## Testing
 
-For FF14SB, Chamber has been extensively tested to reproduce the officially distributed CHARMM FF14SB force field (with the exception of a few corrections discovered via Chamber).  For modrna08, Chamber exactly reproduces all the parameters for FF14SB along with including additional parameters for representing terms with modified RNA atom types.
+Chamber's tests ensure that it exactly reproduces the officially distributed CHARMM FF14SB force field, excepting a few manually verified corrections.  The included forcefields in this distribution are protein.ff14SB, RNA.OL3, and water.tip3p in descending priority.  When including modrna08, Chamber's tests ensure that these parameters are maintained.  Thus, the generated forcefield is confirmed to be a superset of FF14SB with the new modrna08 parameters.
 
 These tests are managed automatically through [GitHub actions](https://github.com/murfalo/chamber/actions/), but you can run them yourself with:
 
@@ -47,6 +47,6 @@ These tests are managed automatically through [GitHub actions](https://github.co
 
 ## Limitations
 
-- Chamber has only been extensively tested for converting the Amber FF14SB (protein.ff14sb, RNA.OL3, water.tip3p) forcefield +/- the Amber modified RNA forcefield (modrna08).
-- Other protein, RNA, and solvent force field sources can be easily specified but are not offered as commandline arguments.
-- ParmEd does not support exporting full topologies.  You will need to create your own.  For Amber FF14SB, topologies are distributed with CHARMM's source code in `toppar/non_charmm/parm14sb_all.rtf`.
+- Other protein, RNA, and solvent force field sources can be easily specified but are not offered as commandline arguments.  Doing so has not been rigorously tested.
+- ParmEd does not support exporting full topologies.  You will need to find a source or create your own.  For Amber FF14SB, topologies are distributed with CHARMM's source code in `toppar/non_charmm/parm14sb_all.rtf`.
+
