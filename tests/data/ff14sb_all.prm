@@ -518,7 +518,7 @@ CT     CT     CZ       63.00   110.00
 CG     CT     CT       63.00   115.60
 CG     CT     CX       63.00   115.60
 CG     CT     HC       50.00   109.50
-OS     CT     OS   1   60.00   101.00
+OS     CT     OS      160.00   101.00
 OS     CT     CY       50.00   110.00
 OS     CT     CZ       50.00   110.00
 OS     CT     NG       50.00   109.50

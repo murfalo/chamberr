@@ -125,7 +125,6 @@ __VERIFY_CORRECTIONS: Dict[
         # official CHARMM FF14SB port.  The author even noted that they could
         # not find the new values, and just used the older 1994 values...
         # (AtomType, (eps, rmin))
-        # Originally:
         ("CLA", __create_atom_type("CLA", 35.45, -0.035591, 2.513, -0.017795)),
         ("POT", __create_atom_type("POT", 39.1, -0.193683, 1.705, -0.096841)),
         ("SOD", __create_atom_type("SOD", 22.99, -0.087439, 1.369, -0.04372)),
@@ -134,20 +133,17 @@ __VERIFY_CORRECTIONS: Dict[
     BondType: [],
     AngleType: [
         # In the official CHARMM FF14SB port, each of these have incorrect
-        # values. In most cases, the corresponding equilibrium angles are
-        # correct and the spring constant is off by less than 1.0.  In other
-        # cases, the equilibrium angle is different and the spring constant is
-        # off by >> 1.0.  Each of these are due to using antiquated values that
-        # have been updated in `leaprc.RNA.OL3`.  The correct values identified
-        # by Chamber are available in `parm10.dat`.
+        # values. In each case, the corresponding equilibrium angles are
+        # correct and the spring constant is off by less than 1.0.  Each of
+        # these are due to using antiquated values that have been updated in
+        # `leaprc.RNA.OL3`.  The correct values identified by Chamber are
+        # available in `parm10.dat`.
         # Originally: AngleType(76.0, 125.1),
         (("CC", "NA", "P"), AngleType(76.7, 125.1)),
         # Originally: AngleType(76.0, 125.1),
         (("CR", "NA", "P"), AngleType(76.7, 125.1)),
-        # Originally: parmed.AngleType(42.0, 102.38),
+        # Originally: AngleType(42.0, 102.38),
         (("NA", "P", "OP"), AngleType(42.9, 102.38)),
-        # Originally: AngleType(1.0, 60.0),
-        (("OS", "CT", "OS"), AngleType(160.0, 101.0)),
     ],
     DihedralType: [],
     ImproperType: [],
