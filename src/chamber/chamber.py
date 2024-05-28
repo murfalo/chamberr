@@ -26,13 +26,13 @@ class _Parser:
         parser = argparse.ArgumentParser(
             prog="chamber",
             description="Convert Amber leaprc files to CHARMM-readable formats.  "
-            "Matches a leaprc of the form "
-            "`$AMBERHOME/dat/leap/cmd/leaprc.{leaprc_source}.`",
+                        "Matches a leaprc of the form "
+                        "`$AMBERHOME/dat/leap/cmd/leaprc.{leaprc_source}.`",
         )
         parser.add_argument(
             "leaprc_source",
             help="name of the leaprc file to convert (without the 'leaprc.' "
-            "prefix)",
+                 "prefix)",
             nargs="?",
             default=None,
         )
@@ -159,7 +159,7 @@ class Chamber:
     )
     __HEADER: str = (
         "* Automatically generated with Chamber\n"
-        "* https://github.com/murfalo/chamber"
+        "* https://github.com/murfalo/chamber\n\n"
     )
 
     def __cleanup(self):
@@ -173,8 +173,8 @@ class Chamber:
             "anything you need!"
         )
         for (
-            atom_name,
-            atom_type,
+                atom_name,
+                atom_type,
         ) in list(self.__combined_amber_params.atom_types.items()):
             if atom_type.epsilon is None:
                 print(
@@ -212,7 +212,7 @@ class Chamber:
             combined_sources = combined_sources[1:]
         else:
             self.__extra_leaprc_source = (
-                leaprc_cmd_path / f"leaprc.{extra_leaprc_source}"
+                    leaprc_cmd_path / f"leaprc.{extra_leaprc_source}"
             )
 
         # In order of ascending priority (parameters defined in lower priority
@@ -263,8 +263,8 @@ class Chamber:
 
         # Removing trailing LTU
         if (
-            type_name.endswith("LT")
-            and match_len == Chamber.__MAX_TYPE_NAME_LENGTH
+                type_name.endswith("LT")
+                and match_len == Chamber.__MAX_TYPE_NAME_LENGTH
         ):
             # Trailing U was clipped off due to name length restriction
             type_name = type_name[:-2]
@@ -289,7 +289,7 @@ class Chamber:
             # Combines
             split_output_stem = self.__extra_leaprc_source.name.split(".")
             assert (
-                split_output_stem[0] == "leaprc"
+                    split_output_stem[0] == "leaprc"
             ), "Extra leaprc source must be a leaprc file"
             output_name = "".join(
                 self.__extra_leaprc_source.name.split(".")[1:]
@@ -319,8 +319,8 @@ class Chamber:
                 )
             charmm_params.angle_types[new_angle_key] = new_angle_type
             if (
-                new_angle_key_reverse != new_angle_key
-                and new_angle_key_reverse in charmm_params.angle_types
+                    new_angle_key_reverse != new_angle_key
+                    and new_angle_key_reverse in charmm_params.angle_types
             ):
                 raise KeyError(
                     f"Reverse of additional angle ({new_angle_key_reverse}) "
@@ -361,10 +361,6 @@ class Chamber:
             charmm_str = pattern.sub(replace, charmm_str)
 
         charmm_str_lines = charmm_str.splitlines()
-        charmm_str_lines.insert(
-            0,
-            "! Generated with `chamber` (https://github.com/murfalo/chamber)",
-        )
 
         # Add additional commands just before "END"
         print("Inserting additional commands...")
