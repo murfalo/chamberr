@@ -40,7 +40,7 @@ def chamber_ff14sb_params():
 
 @pytest.fixture(scope="module")
 def chamber_modrna08_params():
-    chamber = Chamber(extra_leaprc_source="modrna08")
+    chamber = Chamber(extra_leaprc="modrna08")
     chamber.write_charmm_parameters()
     return CharmmParameterSet.load_set(sfiles=chamber.charmm_str_name)
 

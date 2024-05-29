@@ -4,13 +4,15 @@ Chamber uses [ParmEd](https://github.com/parmed/parmed) to convert Amber force f
 
 ## Getting Started
 
+Several converted force fields are already available in `ff_stream`, along with the Amber FF14SB parameters and topologies distributed with CHARMM (see `parm14sb_all.{prm|rtf}`).  To convert some yourself, you will need to setup up Chamber with its required dependencies:
+
 ```bash
 > mamba env create -f environment.yaml
 > mamba activate chamber
 > pip install -e .
 ```
 
-At time of writing, a few custom ParmEd bugfixes are required for Chamber to work properly.  To install my fork of ParmEd:
+Currently, a few custom ParmEd bugfixes are required for Chamber to work properly.  To install my fork of ParmEd and run `chamber`:
 
 ```bash
 > git clone https://github.com/murfalo/parmed
@@ -21,13 +23,16 @@ At time of writing, a few custom ParmEd bugfixes are required for Chamber to wor
 
 ## Examples
 
+Only FF14SB and FF14SB + modrna08 have been thoroughly tested.  In all other cases, proceed with care.
+
 ```bash
-> chamber  # generate CHARMM-readable FF14SB force field
-> chamber modrna08  # generate CHARMM-readable FF14SB + modrna08 force field
-> chamber <some_other_force_field>  # requires care, not thoroughly tested
+> chamber  # FF14SB force field
+> chamber modrna08  # FF14SB + modrna08 force field
+> chamber -r Shaw -s tip4pd  # D.E. Shaw RNA + TIP4PD
+> chamber -r Shaw -s opc modrna08  # D.E. Shaw RNA + OPC + modrna08
 ```
 
-You can now utilize the generated `chamber_ff14sb.str` and `chamber_modrna08.str` files in CHARMM!
+You can now utilize the generated `chamber_none_OL3_ff14sb_tip3p.str` (FF14SB) and `chamber_modrna08_OL3_ff14sb_tip3p.str` (FF14SB + modrna08) files in CHARMM!
 
 ## Resources
 
@@ -47,6 +52,5 @@ These tests are managed automatically through [GitHub actions](https://github.co
 
 ## Limitations
 
-- Other protein, RNA, and solvent force field sources can be easily specified but are not offered as commandline arguments.  Doing so has not been rigorously tested.
 - ParmEd does not support exporting full topologies.  You will need to find a source or create your own.  For Amber FF14SB, topologies are distributed with CHARMM's source code in `toppar/non_charmm/parm14sb_all.rtf`.
 

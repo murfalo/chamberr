@@ -3,8 +3,9 @@
 ###############################################################################
 # Ignore generated toppar files
 /toppar/
-chamber_modrna08.str
-chamber_ff14sb.str
+chamber_*.str
+chamber_*.str
+!/ff_stream/chamber_*.str
 
 ###############################################################################
 # Python ignores
