@@ -17,32 +17,34 @@ from parmed import (
 )
 from parmed.charmm import CharmmParameterSet
 
-from chamber import Chamber
+from chamberr import Chamberr
 
 
 # NOTE(MCA): With pytest fixtures, these CharmmParameterSet's are only created
 #  once, instead of repeatedly creating them in each test they are used.  This
 #  saves a little bit of computational overhead.
 @pytest.fixture(scope="module")
-def charmm_ff14sb_params():
+def charmm_ff14sb_params() -> CharmmParameterSet:
     return CharmmParameterSet.load_set(
-        tfile="tests/data/ff14SB_all.rtf", pfile="tests/data/ff14SB_all.prm"
+        tfile="ff_stream/parm14sb_all.rtf",
+        pfile="ff_stream/parm14sb_all.prm",
     )
 
 
 @pytest.fixture(scope="module")
-def chamber_ff14sb_params():
-    # Run chamber, creating ff14sb_chamber.str
-    chamber = Chamber()
-    chamber.write_charmm_parameters()
-    return CharmmParameterSet.load_set(sfiles=chamber.charmm_str_name)
+def chamberr_ff14sb_params() -> CharmmParameterSet:
+    # Run chamberr, creating ff14sb_chamberr.str
+    chamberr = Chamberr()
+    chamberr.write_charmm_parameters()
+    return CharmmParameterSet.load_set(sfiles=chamberr.charmm_str_name)
 
 
 @pytest.fixture(scope="module")
-def chamber_modrna08_params():
-    chamber = Chamber(extra_leaprc="modrna08")
-    chamber.write_charmm_parameters()
-    return CharmmParameterSet.load_set(sfiles=chamber.charmm_str_name)
+def chamberr_modrna08_params() -> CharmmParameterSet:
+    # Run chamberr, creating ff14sb_chamberr.str
+    chamberr = Chamberr(extra_leaprc="modrna08")
+    chamberr.write_charmm_parameters()
+    return CharmmParameterSet.load_set(sfiles=chamberr.charmm_str_name)
 
 
 ParameterType = Union[
@@ -57,7 +59,7 @@ ParameterType = Union[
 ]
 
 
-# Mapping of parameter types that are allowed to be missing in the Chamber
+# Mapping of parameter types that are allowed to be missing in the Chamberr
 # output.  Typically, these represent parameters that are either extraneous or
 # were erroneously included in the official CHARMM FF14SB port.
 __ALLOW_MISSING: Dict[ParameterType, Set] = {
@@ -136,7 +138,7 @@ __VERIFY_CORRECTIONS: Dict[
         # values. In each case, the corresponding equilibrium angles are
         # correct and the spring constant is off by less than 1.0.  Each of
         # these are due to using antiquated values that have been updated in
-        # `leaprc.RNA.OL3`.  The correct values identified by Chamber are
+        # `leaprc.RNA.OL3`.  The correct values identified by Chamberr are
         # available in `parm10.dat`.
         # Originally: AngleType(76.0, 125.1),
         (("CC", "NA", "P"), AngleType(76.7, 125.1)),
@@ -172,7 +174,7 @@ __ALLOW_MISMATCH[AngleType] |= {
 
 def __compare_dihedrals(
     charmm_dihedral: Union[DihedralType, DihedralTypeList],
-    chamber_dihedral: Union[DihedralType, DihedralTypeList],
+    chamberr_dihedral: Union[DihedralType, DihedralTypeList],
 ) -> bool:
     """
     Compare two dihedrals for equality.  This allows a relative difference of
@@ -182,44 +184,44 @@ def __compare_dihedrals(
     :param charmm_dihedral: The official CHARMM FF14SB dihedral.  This can
      either be a single dihedral, or a list of dihedrals for a full Fourier
      series.
-    :param chamber_dihedral: The Chamber-generated dihedral.
+    :param chamberr_dihedral: The Chamberr-generated dihedral.
     :return: True if the two dihedrals are equal, otherwise False.
     """
-    # Convert DihedralType to DihedralTypeList to avoid special cases
+    # Convert DihedralType to DihedralTypeList to simplify logic
     if isinstance(charmm_dihedral, DihedralType):
         charmm_dihedral = DihedralTypeList(charmm_dihedral)
-    if isinstance(chamber_dihedral, DihedralType):
-        chamber_dihedral = DihedralTypeList(chamber_dihedral)
+    if isinstance(chamberr_dihedral, DihedralType):
+        chamberr_dihedral = DihedralTypeList(chamberr_dihedral)
 
     # Identify which periodicities are present in which dihedral lists
     charmm_per_to_dihedral = {
         dihedral_type.per: dihedral_type for dihedral_type in charmm_dihedral
     }
-    chamber_per_to_dihedral = {
-        dihedral_type.per: dihedral_type for dihedral_type in chamber_dihedral
+    chamberr_per_to_dihedral = {
+        dihedral_type.per: dihedral_type for dihedral_type in chamberr_dihedral
     }
     charmm_periodicities = {per for per in charmm_per_to_dihedral.keys()}
-    chamber_periodicities = {per for per in chamber_per_to_dihedral.keys()}
+    chamberr_periodicities = {per for per in chamberr_per_to_dihedral.keys()}
 
-    # Return False, immediately Chamber is missing any periodicities
-    if charmm_periodicities - chamber_periodicities:
+    # Return False, immediately Chamberr is missing any periodicities
+    if charmm_periodicities - chamberr_periodicities:
         return False
 
     # Return False if any extra periodicities exist with non-zero phi_k
-    extra_periodicities = chamber_periodicities - charmm_periodicities
+    extra_periodicities = chamberr_periodicities - charmm_periodicities
     if extra_periodicities:
         if any(
-            chamber_per_to_dihedral[per].phi_k != 0.0
+            chamberr_per_to_dihedral[per].phi_k != 0.0
             for per in extra_periodicities
         ):
             return False
 
     # Generate a zipped list of dihedrals with matching periodicities to
     # compare
-    matching_periodicities = charmm_periodicities & chamber_periodicities
+    matching_periodicities = charmm_periodicities & chamberr_periodicities
     dihedrals_to_compare = zip(
         (charmm_per_to_dihedral[per] for per in matching_periodicities),
-        (chamber_per_to_dihedral[per] for per in matching_periodicities),
+        (chamberr_per_to_dihedral[per] for per in matching_periodicities),
     )
 
     # Allow up to a 0.2% mismatch in dihedral parameter attributes.  This is
@@ -231,12 +233,12 @@ def __compare_dihedrals(
     # Between the two dihedrals, if any pair of `compare_attrs` aren't within
     # `rel_tol` of one another, return False.
     compare_attrs = ("phi_k", "per", "phase", "scee", "scnb")
-    for charmm_dihe, chamber_dihe in dihedrals_to_compare:
+    for charmm_dihe, chamberr_dihe in dihedrals_to_compare:
         for attr in compare_attrs:
             charmm_dihe_attr = getattr(charmm_dihe, attr)
-            chamber_dihe_attr = getattr(chamber_dihe, attr)
+            chamberr_dihe_attr = getattr(chamberr_dihe, attr)
             if not math.isclose(
-                charmm_dihe_attr, chamber_dihe_attr, rel_tol=rel_tol
+                charmm_dihe_attr, chamberr_dihe_attr, rel_tol=rel_tol
             ):
                 return False
 
@@ -258,21 +260,21 @@ __COMPARE_EQUAL: Dict[
 def compare_types(
     parameter_type: ParameterType,
     charmm_params: CharmmParameterSet,
-    chamber_params: CharmmParameterSet,
+    chamberr_params: CharmmParameterSet,
 ) -> None:
     """
     Compares the types present between two parameter sets.  Intended for
     testing whether the official CHARMM parameter set
-    (:param_ref:`charmm_params`) matches the solution generated by Chamber
-    (:param_ref:`chamber_params`).  Fails if the CHARMM parameter set contains
-    types not found in the Chamber parameter set, or if any matching types have
+    (:param_ref:`charmm_params`) matches the solution generated by Chamberr
+    (:param_ref:`chamberr_params`).  Fails if the CHARMM parameter set contains
+    types not found in the Chamberr parameter set, or if any matching types have
     different parameters of the specified parameter type.
 
     :param parameter_type: The type of parameter to compare, e.g.
      parmed.BondType.
     :param charmm_params:  A parameter set for a force field with the known
      CHARMM solution.
-    :param chamber_params:  A parameter set for the same force field generated
+    :param chamberr_params:  A parameter set for the same force field generated
      by CHAMBER.
     """
     type_name = parameter_type.__name__.removesuffix("Type")
@@ -287,24 +289,24 @@ def compare_types(
     allow_mismatch = __ALLOW_MISMATCH[parameter_type]
     compare_equal = __COMPARE_EQUAL[parameter_type]
 
-    # Process the charmm and chamber type dictionaries
+    # Process the charmm and chamberr type dictionaries
     type_dict_attr = f"{type_name_snake}_types"
     charmm_types = getattr(charmm_params, type_dict_attr)
-    chamber_types = getattr(chamber_params, type_dict_attr)
+    chamberr_types = getattr(chamberr_params, type_dict_attr)
     charmm_type_keys = set(charmm_types.keys())
-    chamber_type_keys = set(chamber_types.keys())
+    chamberr_type_keys = set(chamberr_types.keys())
 
     # Check for missing type keys
     n_missing = 0
-    missing_type_keys = charmm_type_keys - chamber_type_keys
+    missing_type_keys = charmm_type_keys - chamberr_type_keys
     for key in missing_type_keys:
         charmm_type = charmm_types[key]
         if key not in allow_missing:
             n_missing += 1
             print(
-                f"Chamber missing {type_name} type for key {key}.  "
+                f"Chamberr missing {type_name} type for key {key}.  "
                 f"Official CHARMM FF14SB contains {charmm_type!r} but "
-                f"Chamber's output does not."
+                f"Chamberr's output does not."
             )
 
     if n_missing > 0:
@@ -314,22 +316,23 @@ def compare_types(
     # parameters.
     n_mismatches = 0
     for key in charmm_type_keys:
+        # Skip any keys that were identified as missing
         if key in missing_type_keys:
             assert (
-                key not in chamber_types
-            ), f"Expected {key} to be absent from Chamber output"
+                key not in chamberr_types
+            ), f"Expected key {key} to be absent from Chamberr output"
             continue
         charmm_type = charmm_types[key]
-        chamber_type = chamber_types[key]
+        chamberr_type = chamberr_types[key]
         if (
-            not compare_equal(charmm_type, chamber_type)
+            not compare_equal(charmm_type, chamberr_type)
             and key not in allow_mismatch
         ):
             n_mismatches += 1
             print(
                 f"Found {type_name} type mismatch.  For {key}, official "
-                f"CHARMM FF14SB port reports {charmm_type!r}. Chamber gives "
-                f"{chamber_type!r}."
+                f"CHARMM FF14SB port reports {charmm_type!r}. Chamberr gives "
+                f"{chamberr_type!r}."
             )
 
     if n_mismatches > 0:
@@ -338,21 +341,21 @@ def compare_types(
     # Confirm that all manually-verified corrections were made.
     for key, verified_answer in __VERIFY_CORRECTIONS[parameter_type]:
         assert (
-            chamber_types[key] == verified_answer
+            chamberr_types[key] == verified_answer
         ), f"Incorrect {type_name} parameter value for key {key}"
 
-    # Identify new types included with Chamber.  In many cases these are
+    # Identify new types included with Chamberr.  In many cases these are
     # desirable, as they represent the types generated when loading parameters
     # not included in the official CHARMM force field (e.g., modified RNA).
-    extra_type_keys = chamber_type_keys - charmm_type_keys
+    extra_type_keys = chamberr_type_keys - charmm_type_keys
     if extra_type_keys:
         print(
-            f"Found {type_name} types in Chamber but not the official CHARMM "
+            f"Found {type_name} types in Chamberr but not the official CHARMM "
             f"FF14SB port:"
         )
         print(
             ", ".join(
-                str(chamber_types[extra_type_key])
+                f"{chamberr_types[extra_type_key]!r}"
                 for extra_type_key in extra_type_keys
             )
         )
@@ -360,38 +363,38 @@ def compare_types(
 
 
 def test_atom_types(
-    charmm_ff14sb_params, chamber_ff14sb_params, chamber_modrna08_params
+    charmm_ff14sb_params, chamberr_ff14sb_params, chamberr_modrna08_params
 ):
-    compare_types(AtomType, charmm_ff14sb_params, chamber_ff14sb_params)
-    compare_types(AtomType, charmm_ff14sb_params, chamber_modrna08_params)
+    compare_types(AtomType, charmm_ff14sb_params, chamberr_ff14sb_params)
+    compare_types(AtomType, charmm_ff14sb_params, chamberr_modrna08_params)
 
 
 def test_bond_types(
-    charmm_ff14sb_params, chamber_ff14sb_params, chamber_modrna08_params
+    charmm_ff14sb_params, chamberr_ff14sb_params, chamberr_modrna08_params
 ):
-    compare_types(BondType, charmm_ff14sb_params, chamber_ff14sb_params)
-    compare_types(BondType, charmm_ff14sb_params, chamber_modrna08_params)
+    compare_types(BondType, charmm_ff14sb_params, chamberr_ff14sb_params)
+    compare_types(BondType, charmm_ff14sb_params, chamberr_modrna08_params)
 
 
 def test_angle_types(
-    charmm_ff14sb_params, chamber_ff14sb_params, chamber_modrna08_params
+    charmm_ff14sb_params, chamberr_ff14sb_params, chamberr_modrna08_params
 ):
-    compare_types(AngleType, charmm_ff14sb_params, chamber_ff14sb_params)
-    compare_types(AngleType, charmm_ff14sb_params, chamber_modrna08_params)
+    compare_types(AngleType, charmm_ff14sb_params, chamberr_ff14sb_params)
+    compare_types(AngleType, charmm_ff14sb_params, chamberr_modrna08_params)
 
 
 def test_dihedral_types(
-    charmm_ff14sb_params, chamber_ff14sb_params, chamber_modrna08_params
+    charmm_ff14sb_params, chamberr_ff14sb_params, chamberr_modrna08_params
 ):
-    compare_types(DihedralType, charmm_ff14sb_params, chamber_ff14sb_params)
-    compare_types(DihedralType, charmm_ff14sb_params, chamber_modrna08_params)
+    compare_types(DihedralType, charmm_ff14sb_params, chamberr_ff14sb_params)
+    compare_types(DihedralType, charmm_ff14sb_params, chamberr_modrna08_params)
 
 
 def test_improper_types(
-    charmm_ff14sb_params, chamber_ff14sb_params, chamber_modrna08_params
+    charmm_ff14sb_params, chamberr_ff14sb_params, chamberr_modrna08_params
 ):
-    compare_types(ImproperType, charmm_ff14sb_params, chamber_ff14sb_params)
-    compare_types(ImproperType, charmm_ff14sb_params, chamber_modrna08_params)
+    compare_types(ImproperType, charmm_ff14sb_params, chamberr_ff14sb_params)
+    compare_types(ImproperType, charmm_ff14sb_params, chamberr_modrna08_params)
 
 
 # TODO(MCA): Ensure other types are empty for all three fixtures

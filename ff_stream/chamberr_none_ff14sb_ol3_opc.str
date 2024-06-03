@@ -1,11 +1,11 @@
-* Automatically generated with Chamber
-* https://github.com/murfalo/chamber
+* Automatically generated with Chamberr (June 3, 2024)
+* https://github.com/murfalo/chamberr
 *
 
 ! Force fields loaded in ascending order of priority
 ! Extra source: none
-! RNA source: OL3
 ! Protein source: ff14sb
+! RNA source: OL3
 ! Solvent source: opc
 
 read rtf append card
@@ -1591,12 +1591,10 @@ CX     2C     S      S           0.0560  1     0.00
 X      HW     OW     X           0.0000  1     0.00
 
 IMPROPERS
-2C     CA     CA     CA          1.1000  2   180.00
 2C     O      C      OH         10.5000  2   180.00
 BR     CA     CA     CA          1.1000  2   180.00
 C      C4     C4     CT          1.1000  2   180.00
 C      C4     NG     CT          1.0000  2   180.00
-C      CB     CB     NB          0.0000  2   180.00
 C      CM     CM     CT          1.1000  2   180.00
 C      CM     NG     CT          1.0000  2   180.00
 C      CS     CM     CT          1.1000  2   180.00
@@ -1606,63 +1604,65 @@ C      CT     N      H           1.1000  2   180.00
 C      CT     N      O           1.1000  2   180.00
 C      CX     N      H           1.1000  2   180.00
 C4     N2     CA     NC          1.1000  2   180.00
-CB     C5     NG     CT          1.0000  2   180.00
 CA     CA     C      OH          1.1000  2   180.00
 CA     CA     C      OS          1.1000  2   180.00
+CA     CA     CA     2C          1.1000  2   180.00
 CA     CA     CA     CT          1.1000  2   180.00
 CA     CA     CA     OH          1.1000  2   180.00
-CA     CB     CB     NB          0.0000  2   180.00
-CA     CB     CN     NA          0.0000  2   180.00
+CB     C5     NG     CT          1.0000  2   180.00
 CB     CK     NG     CT          1.0000  2   180.00
 CB     CP     NG     CT          1.0000  2   180.00
 CB     CT     CG     CW          1.1000  2   180.00
 CB     N2     CA     NC          1.1000  2   180.00
-CB     NC     CB     NG          0.0000  2   180.00
-CC     CR     NA     P           1.1000  2   180.00
 CM     CT     CM     HA          1.1000  2   180.00
 CM     H4     C      O           1.1000  2   180.00
 CM     N2     CA     NC          1.1000  2   180.00
+CR     CC     NA     P           1.1000  2   180.00
 CS     CT     CS     HA          1.1000  2   180.00
 CS     H4     C      O           1.1000  2   180.00
 CS     N2     CA     NC          1.1000  2   180.00
-CA     CN     CB     CG          0.0000  2   180.00
-X      CT     N      CT          1.0000  2   180.00
+CG     CN     CB     CA          0.0000  2   180.00
 CT     CV     CC     NA          1.1000  2   180.00
 CT     CW     CC     NA          1.1000  2   180.00
 CT     CW     CC     NB          1.1000  2   180.00
-X      CT     N      CX          1.0000  2   180.00
-CT     H1     CJ     H1          0.0000  2   180.00
-CT     H1     CJ     OH          0.0000  2   180.00
-CT     H1     CJ     OS          0.0000  2   180.00
 CT     O      C      OH         10.5000  2   180.00
-X      X      N      H           1.0000  2   180.00
-X      X      N2     H           1.0000  2   180.00
-X      X      NA     H           1.0000  2   180.00
-H1     H1     CJ     OH          0.0000  2   180.00
-H1     H1     CJ     OS          0.0000  2   180.00
-X      X      C4     H4          1.1000  2   180.00
-X      X      CA     H4          1.1000  2   180.00
-X      X      CM     H4          1.1000  2   180.00
-X      X      CS     H4          1.1000  2   180.00
-X      X      CV     H4          1.1000  2   180.00
-X      X      CW     H4          1.1000  2   180.00
+H1     H1     CJ     CT          0.0000  2   180.00
 H5     O      C      OH          1.1000  2   180.00
 H5     O      C      OS          1.1000  2   180.00
+N2     NA     CA     NC          1.1000  2   180.00
+NA     CA     CN     CB          0.0000  2   180.00
+NB     C      CB     CB          0.0000  2   180.00
+NB     CA     CB     CB          0.0000  2   180.00
+NG     CB     CB     NC          0.0000  2   180.00
+OH     H1     CJ     CT          0.0000  2   180.00
+OH     H1     CJ     H1          0.0000  2   180.00
+OS     H1     CJ     CT          0.0000  2   180.00
+OS     H1     CJ     H1          0.0000  2   180.00
+X      CT     N      CT          1.0000  2   180.00
+X      CT     N      CX          1.0000  2   180.00
+X      N2     CA     N2         10.5000  2   180.00
+X      O2     C      O2         10.5000  2   180.00
+X      O2     CO     O2         10.5000  2   180.00
+X      X      C      O          10.5000  2   180.00
+X      X      C4     H4          1.1000  2   180.00
+X      X      C4     HA          1.1000  2   180.00
 X      X      C5     H5          1.1000  2   180.00
+X      X      CA     H4          1.1000  2   180.00
 X      X      CA     H5          1.1000  2   180.00
+X      X      CA     HA          1.1000  2   180.00
 X      X      CK     H5          1.1000  2   180.00
+X      X      CM     H4          1.1000  2   180.00
+X      X      CM     HA          1.1000  2   180.00
 X      X      CP     H5          1.1000  2   180.00
 X      X      CQ     H5          1.1000  2   180.00
 X      X      CR     H5          1.1000  2   180.00
-X      X      C4     HA          1.1000  2   180.00
-X      X      CA     HA          1.1000  2   180.00
-X      X      CM     HA          1.1000  2   180.00
+X      X      CS     H4          1.1000  2   180.00
 X      X      CS     HA          1.1000  2   180.00
-X      N2     CA     N2         10.5000  2   180.00
-N2     NA     CA     NC          1.1000  2   180.00
-X      X      C      O          10.5000  2   180.00
-X      O2     C      O2         10.5000  2   180.00
-X      O2     CO     O2         10.5000  2   180.00
+X      X      CV     H4          1.1000  2   180.00
+X      X      CW     H4          1.1000  2   180.00
+X      X      N      H           1.0000  2   180.00
+X      X      N2     H           1.0000  2   180.00
+X      X      NA     H           1.0000  2   180.00
 
 NONBONDED  nbxmod  5 atom cdiel fshift vatom vdistance vfswitch -
 cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 0.8333333333333334 wmin 1.5

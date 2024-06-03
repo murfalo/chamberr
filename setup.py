@@ -1,14 +1,14 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="chamber",
+    name="chamberr",
     version="0.1.0",
     author="Murphy Angelo",
     author_email="howdy@murfalo.com",
     description="Converts AMBER forcefields to CHARMM-readable formats",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/murfalo/chamber",
+    url="https://github.com/murfalo/chamberr",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     install_requires=[
@@ -26,7 +26,7 @@ setup(
     python_requires=">=3.6",
     entry_points={
         "console_scripts": [
-            "chamber=chamber.__main__:main",
+            "chamberr=chamberr.__main__:main",
         ],
     },
 )

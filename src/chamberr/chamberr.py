@@ -2,11 +2,12 @@
 
 import argparse
 import contextlib
+import datetime
 import os
 import re
 from io import StringIO
 from pathlib import Path
-from typing import Optional, List, IO
+from typing import IO, List, Optional
 
 from parmed import AngleType, AtomType
 from parmed.amber import AmberParameterSet
@@ -15,19 +16,22 @@ from parmed.charmm import CharmmParameterSet
 
 class _Parser:
     """
-    Parser for Chamber.
+    Parser for Chamberr.
     """
 
     @staticmethod
     def __build_parser() -> argparse.ArgumentParser:
         """
-        Builds a parser for Chamber.
+        Builds a parser for Chamberr.
         """
         parser = argparse.ArgumentParser(
-            prog="chamber",
+            prog="chamberr",
             description="Convert Amber leaprc files to CHARMM-readable "
             "formats.  Input leaprc arguments are expected to be found at "
-            "`$AMBERHOME/dat/leap/cmd/leaprc.*`",
+            "`$AMBERHOME/dat/leap/cmd/leaprc.*`  In order of ascending "
+            "priority, the final parameters will be the intersection of the "
+            "loaded extra, protein, RNA, and solvent force fields.",
+            formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         )
         parser.add_argument(
             "-p",
@@ -53,7 +57,11 @@ class _Parser:
         parser.add_argument(
             "extra_leaprc",
             help="Name of an additional Amber force field leaprc to load "
-            "(without the `leaprc.` prefix)",
+            "(without the `leaprc.` prefix).  By default, this force field is "
+            "assigned the lowest priority to prevent overwriting what are "
+            "likely to be better-refined protein, RNA, and solvent "
+            "parameters.  In other words, the combined force field will be a "
+            "superset of the loaded protein, RNA, and solvent force field.",
             nargs="?",
             default=None,
         )
@@ -63,7 +71,7 @@ class _Parser:
     @staticmethod
     def parse_args() -> argparse.Namespace:
         """
-        Parses arguments for Chamber.
+        Parses arguments for Chamberr.
 
         :return: The parsed arguments.
         """
@@ -72,7 +80,7 @@ class _Parser:
 
 class _Regex:
     """
-    Regular expression patterns for user with Chamber.
+    Regular expression patterns for user with Chamberr.
     """
 
     @staticmethod
@@ -107,12 +115,6 @@ class _Regex:
         # are preserved.
         (r"KP\s(\s+)", r"POT\1"),
         (r"KP", "POT"),
-        # This dihedral must be reordered to match definitions in
-        # the official CHARMM FF14SB port.
-        (
-            "C5     CB     NG     CT",
-            "CB     C5     NG     CT",
-        ),
         # Use append for reading topologies, and flex for reading parameters.
         # `append` prevents our skeleton topology, which includes only atom
         # definitions, from overwriting any previously loaded topologies.
@@ -135,18 +137,18 @@ _Regex.RE_SUBS = tuple(
 )
 
 
-class Chamber:
+class Chamberr:
     """
     Convert leaprc (Amber FF format) to a combined, CHARMM-readable parameter
     and topology files in `.str` format.  Currently, the output topology only
     includes the required masses and atom types.  To use the output parameters,
-    load them into CHARMM using `stream <chamber_output>.str` along with a
+    load them into CHARMM using `stream <chamberr_output>.str` along with a
     topology file (`.rtf`) defining residues and patches with the
-    Chamber-generated atom types.  By default, Chamber loads protein.ff14SB,
+    Chamberr-generated atom types.  By default, Chamberr loads protein.ff14SB,
     RNA.OL3, and water.tip3p.  An additional forcefield can be included by
     passing :paramref:`extra_leaprc`.
 
-    Chamber was built to convert RNA force fields (specifically, RNA.OL3 and
+    Chamberr was built to convert RNA force fields (specifically, RNA.OL3 and
     RNA.modrna08) to CHARMM-readable formats for use with, e.g., λ-dynamics.
     These are currently the only rigorously tested use cases.  Expanding to
     other force fields should be possible, but requires additional care.
@@ -198,16 +200,17 @@ class Chamber:
         # See: https://academiccharmm.org/documentation/latest/hbonds#Function
         "HBOND CUTHB 0.5",
     )
+    __START_DATE = datetime.datetime.now().strftime("%B %-d, %Y")
     __HEADER: str = (
-        f"* Automatically generated with Chamber\n"
-        f"* https://github.com/murfalo/chamber\n"
+        f"* Automatically generated with Chamberr ({__START_DATE})\n"
+        f"* https://github.com/murfalo/chamberr\n"
         f"*\n"
         f"\n"
     )
 
     def __cleanup(self):
         """
-        Helper function for cleaning up Chamber's AmberParameterSet.
+        Helper function for cleaning up Chamberr's AmberParameterSet.
         """
         # Remove single-entry, ill-defined atom types to prevent errors when
         # converting to CHARMM.
@@ -226,59 +229,6 @@ class Chamber:
                 )
                 del self.__combined_amber_params.atom_types[atom_name]
 
-    @property
-    def leaprc_path(self) -> Path:
-        """
-        Returns a Path object describing the where Amber's leaprcs are located
-        ($AMBERHOME/dat/leap/cmd).
-
-        :return: The Amber leaprc path.
-        """
-        assert "AMBERHOME" in os.environ, "$AMBERHOME is not set"
-        return Path(os.environ["AMBERHOME"]).resolve() / "dat" / "leap" / "cmd"
-
-    @property
-    def __leaprc_paths(self) -> List[Path]:
-        """
-        Returns a tuple of Chamber's leaprc paths in ascending order of
-        priority.
-
-        :return: The list of leaprc paths.
-        """
-        # In order of ascending priority (parameters defined in lower priority
-        # files will overwrite parameters in higher priority files)
-        leaprcs = [
-            self.__extra_leaprc,
-            self.__rna_leaprc,
-            self.__protein_leaprc,
-            self.__solvent_leaprc,
-        ]
-
-        if self.__extra_leaprc is None:
-            return leaprcs[1:]
-        else:
-            return leaprcs
-
-    @property
-    def combined_leaprc(self) -> IO[str]:
-        """
-        Returns an in-memory, combined leaprc file which sources all of
-        Chamber's leaprc sources in order of ascending priority.
-
-        :return: The in-memory, combined leaprc.
-        """
-        # Create an in-memory leaprc file which combines all of the above
-        # sources using the `source` command.
-        combined_leaprc_file = StringIO()
-        for leaprc_path in self.__leaprc_paths:
-            with open(leaprc_path, "r", encoding="utf-8") as leaprc_file:
-                combined_leaprc_file.write(f"# Sourced from {leaprc_path}\n")
-                combined_leaprc_file.write(leaprc_file.read())
-                combined_leaprc_file.write("\n")
-        combined_leaprc_file.seek(0)
-
-        return combined_leaprc_file
-
     def __init__(
         self,
         protein_leaprc: str = "ff14sb",
@@ -287,7 +237,7 @@ class Chamber:
         extra_leaprc: str = None,
     ):
         """
-        Initializes a Chamber instance.  See :class:`Chamber` documentation.
+        Initializes a Chamberr instance.  See :class:`Chamberr` documentation.
         """
         leaprc_path = self.leaprc_path
 
@@ -319,6 +269,56 @@ class Chamber:
 
         self.__cleanup()
 
+    @property
+    def leaprc_path(self) -> Path:
+        """
+        Returns a Path object describing the where Amber's leaprcs are located
+        ($AMBERHOME/dat/leap/cmd).
+
+        :return: The Amber leaprc path.
+        """
+        assert "AMBERHOME" in os.environ, "$AMBERHOME is not set"
+        return Path(os.environ["AMBERHOME"]).resolve() / "dat" / "leap" / "cmd"
+
+    @property
+    def __leaprc_paths(self) -> List[Path]:
+        """
+        Returns a tuple of Chamberr's leaprc paths in ascending order of
+        priority.
+
+        :return: The list of leaprc paths.
+        """
+        # In order of ascending priority (multiply-defined parameters will
+        # take the value of the highest priority definition)
+        leaprcs = [
+            self.__extra_leaprc,
+            self.__protein_leaprc,
+            self.__rna_leaprc,
+            self.__solvent_leaprc,
+        ]
+
+        return [leaprc for leaprc in leaprcs if leaprc is not None]
+
+    @property
+    def combined_leaprc(self) -> IO[str]:
+        """
+        Returns an in-memory, combined leaprc file which sources all of
+        Chamberr's leaprc sources in order of ascending priority.
+
+        :return: The in-memory, combined leaprc.
+        """
+        # Create an in-memory leaprc file which combines all of the above
+        # sources using the `source` command.
+        combined_leaprc_file = StringIO()
+        for leaprc_path in self.__leaprc_paths:
+            with open(leaprc_path, "r", encoding="utf-8") as leaprc_file:
+                combined_leaprc_file.write(f"# Sourced from {leaprc_path}\n")
+                combined_leaprc_file.write(leaprc_file.read())
+                combined_leaprc_file.write("\n")
+        combined_leaprc_file.seek(0)
+
+        return combined_leaprc_file
+
     @staticmethod
     def __remove_type_name_decor(type_name: str) -> str:
         """
@@ -334,7 +334,7 @@ class Chamber:
         # Removing trailing LTU
         if (
             type_name.endswith("LT")
-            and match_len == Chamber.__MAX_TYPE_NAME_LENGTH
+            and match_len == Chamberr.__MAX_TYPE_NAME_LENGTH
         ):
             # Trailing U was clipped off due to name length restriction
             type_name = type_name[:-2]
@@ -380,24 +380,27 @@ class Chamber:
     @property
     def charmm_str_name(self) -> str:
         """
-        Returns the name of the CHARMM stream file that Chamber outputs. This
-        will be `ff14sb_chamber.str` if extra_leaprc is None, otherwise the
+        Returns the name of the CHARMM stream file that Chamberr outputs. This
+        will be `ff14sb_chamberr.str` if extra_leaprc is None, otherwise the
         provided extra leaprc source's name with the suffix `.str`
 
         :return: The CHARMM .str filename.
         """
+        # TODO(MCA): Don't replicate this in multiple places...  Make the list
+        #  include types which can be used by Chamber later to loop through
+        #  priorities.  This will be more resilient when changing the orders.
         leaprc_names = (
-            self.extra_leaprc_name,
-            self.rna_leaprc_name,
-            self.protein_leaprc_name,
-            self.solvent_leaprc_name,
+            self.extra_leaprc_name.lower(),
+            self.protein_leaprc_name.lower(),
+            self.rna_leaprc_name.lower(),
+            self.solvent_leaprc_name.lower(),
         )
 
-        return f"chamber_{'_'.join(leaprc_names)}.str"
+        return f"chamberr_{'_'.join(leaprc_names)}.str"
 
     def write_charmm_parameters(self):
         """
-        Write chamber's combined AmberParameterSet into a CHARMM-readable
+        Write chamberr's combined AmberParameterSet into a CHARMM-readable
         `.str` file.
         """
         # Convert to CHARMM parameters
@@ -408,7 +411,7 @@ class Chamber:
 
         # Add additional angles
         print("Adding additional angles...")
-        for new_angle_key, new_angle_type in Chamber.__ADDITIONAL_ANGLES:
+        for new_angle_key, new_angle_type in Chamberr.__ADDITIONAL_ANGLES:
             new_angle_key_reverse = new_angle_key[::-1]
             if new_angle_key in charmm_params.angle_types:
                 print(
@@ -431,7 +434,7 @@ class Chamber:
                 )
 
         # Add additional atoms
-        for atom_type, lj_params in Chamber.__ADDITIONAL_ATOMS:
+        for atom_type, lj_params in Chamberr.__ADDITIONAL_ATOMS:
             atom_type.set_lj_params(
                 lj_params[0], lj_params[1], lj_params[2], lj_params[3]
             )
@@ -449,8 +452,8 @@ class Chamber:
             self.__HEADER
             + f"! Force fields loaded in ascending order of priority\n"
             f"! Extra source: {self.extra_leaprc_name}\n"
-            f"! RNA source: {self.rna_leaprc_name}\n"
             f"! Protein source: {self.protein_leaprc_name}\n"
+            f"! RNA source: {self.rna_leaprc_name}\n"
             f"! Solvent source: {self.solvent_leaprc_name}\n\n"
             + charmm_str.getvalue()
         )
@@ -459,7 +462,8 @@ class Chamber:
         print("Removing decorators from type names...")
         type_names = _Regex.ATOM_TYPE.findall(charmm_str)
         type_name_map = {
-            name: Chamber.__remove_type_name_decor(name) for name in type_names
+            name: Chamberr.__remove_type_name_decor(name)
+            for name in type_names
         }
         for original_name, new_name in type_name_map.items():
             charmm_str = re.sub(
@@ -478,7 +482,7 @@ class Chamber:
         found_end = False
         for index in range(len(charmm_str_lines) - 1, -1, -1):
             if charmm_str_lines[index].strip() == "END":
-                charmm_str_lines[index:index] = Chamber.__ADDITIONAL_COMMANDS
+                charmm_str_lines[index:index] = Chamberr.__ADDITIONAL_COMMANDS
                 found_end = True
                 break
 
@@ -504,13 +508,13 @@ def main():
         )
 
     args = _Parser.parse_args()
-    chamber = Chamber(
+    chamberr = Chamberr(
         protein_leaprc=args.protein_leaprc,
         rna_leaprc=args.rna_leaprc,
         solvent_leaprc=args.solvent_leaprc,
         extra_leaprc=args.extra_leaprc,
     )
-    chamber.write_charmm_parameters()
+    chamberr.write_charmm_parameters()
 
 
 if __name__ == "__main__":

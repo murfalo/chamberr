@@ -1,11 +1,11 @@
-* Automatically generated with Chamber
-* https://github.com/murfalo/chamber
+* Automatically generated with Chamberr (June 3, 2024)
+* https://github.com/murfalo/chamberr
 *
 
 ! Force fields loaded in ascending order of priority
-! Extra source: none
-! RNA source: OL3
+! Extra source: modrna08
 ! Protein source: ff14sb
+! RNA source: OL3
 ! Solvent source: tip3p
 
 read rtf append card
@@ -14,61 +14,63 @@ read rtf append card
 36   1
 
 MASS    -1 C       12.01000
+MASS    -1 CG      12.01000
 MASS    -1 CA      12.01000
 MASS    -1 CB      12.01000
 MASS    -1 CC      12.01000
-MASS    -1 CD      12.01000
-MASS    -1 CI      12.01000
 MASS    -1 CK      12.01000
-MASS    -1 CP      12.01000
 MASS    -1 CM      12.01000
-MASS    -1 CS      12.01000
-MASS    -1 CN      12.01000
 MASS    -1 CQ      12.01000
 MASS    -1 CR      12.01000
 MASS    -1 CT      12.01000
+MASS    -1 CZ      12.01000
+MASS    -1 H        1.00800
+MASS    -1 H1       1.00800
+MASS    -1 H2       1.00800
+MASS    -1 H4       1.00800
+MASS    -1 H5       1.00800
+MASS    -1 HA       1.00800
+MASS    -1 HC       1.00800
+MASS    -1 HO       1.00800
+MASS    -1 HP       1.00800
+MASS    -1 N       14.01000
+MASS    -1 NG      14.01000
+MASS    -1 N2      14.01000
+MASS    -1 N3      14.01000
+MASS    -1 NA      14.01000
+MASS    -1 NB      14.01000
+MASS    -1 NC      14.01000
+MASS    -1 NT      14.01000
+MASS    -1 NY      14.01000
+MASS    -1 O       16.00000
+MASS    -1 O2      16.00000
+MASS    -1 OH      16.00000
+MASS    -1 OS      16.00000
+MASS    -1 P       30.97000
+MASS    -1 S       32.06000
+MASS    -1 SO      32.06000
+MASS    -1 SS      32.06000
+MASS    -1 CD      12.01000
+MASS    -1 CI      12.01000
+MASS    -1 CP      12.01000
+MASS    -1 CS      12.01000
+MASS    -1 CN      12.01000
 MASS    -1 CV      12.01000
 MASS    -1 CW      12.01000
-MASS    -1 CG      12.01000
 MASS    -1 CX      12.01000
 MASS    -1 CY      12.01000
-MASS    -1 CZ      12.01000
 MASS    -1 C5      12.01000
 MASS    -1 C4      12.01000
 MASS    -1 C0      40.08000
-MASS    -1 H        1.00800
-MASS    -1 HC       1.00800
-MASS    -1 H1       1.00800
-MASS    -1 H2       1.00800
 MASS    -1 H3       1.00800
-MASS    -1 HA       1.00800
-MASS    -1 H4       1.00800
-MASS    -1 H5       1.00800
-MASS    -1 HO       1.00800
 MASS    -1 HS       1.00800
-MASS    -1 HP       1.00800
 MASS    -1 HZ       1.00800
 MASS    -1 F       19.00000
 MASS    -1 CL      35.45000
 MASS    -1 BR      79.90000
 MASS    -1 I      126.90000
 MASS    -1 MG      24.30500
-MASS    -1 N       14.01000
-MASS    -1 NA      14.01000
-MASS    -1 NB      14.01000
-MASS    -1 NC      14.01000
-MASS    -1 N2      14.01000
-MASS    -1 N3      14.01000
-MASS    -1 NT      14.01000
-MASS    -1 NG      14.01000
-MASS    -1 NY      14.01000
-MASS    -1 O       16.00000
-MASS    -1 O2      16.00000
-MASS    -1 OH      16.00000
-MASS    -1 OS      16.00000
 MASS    -1 OP      16.00000
-MASS    -1 P       30.97000
-MASS    -1 S       32.06000
 MASS    -1 SH      32.06000
 MASS    -1 CO      12.01000
 MASS    -1 2C      12.01000
@@ -147,61 +149,63 @@ read para flex card
 *
 ATOMS
 MASS    -1 C       12.01000
+MASS    -1 CG      12.01000
 MASS    -1 CA      12.01000
 MASS    -1 CB      12.01000
 MASS    -1 CC      12.01000
-MASS    -1 CD      12.01000
-MASS    -1 CI      12.01000
 MASS    -1 CK      12.01000
-MASS    -1 CP      12.01000
 MASS    -1 CM      12.01000
-MASS    -1 CS      12.01000
-MASS    -1 CN      12.01000
 MASS    -1 CQ      12.01000
 MASS    -1 CR      12.01000
 MASS    -1 CT      12.01000
+MASS    -1 CZ      12.01000
+MASS    -1 H        1.00800
+MASS    -1 H1       1.00800
+MASS    -1 H2       1.00800
+MASS    -1 H4       1.00800
+MASS    -1 H5       1.00800
+MASS    -1 HA       1.00800
+MASS    -1 HC       1.00800
+MASS    -1 HO       1.00800
+MASS    -1 HP       1.00800
+MASS    -1 N       14.01000
+MASS    -1 NG      14.01000
+MASS    -1 N2      14.01000
+MASS    -1 N3      14.01000
+MASS    -1 NA      14.01000
+MASS    -1 NB      14.01000
+MASS    -1 NC      14.01000
+MASS    -1 NT      14.01000
+MASS    -1 NY      14.01000
+MASS    -1 O       16.00000
+MASS    -1 O2      16.00000
+MASS    -1 OH      16.00000
+MASS    -1 OS      16.00000
+MASS    -1 P       30.97000
+MASS    -1 S       32.06000
+MASS    -1 SO      32.06000
+MASS    -1 SS      32.06000
+MASS    -1 CD      12.01000
+MASS    -1 CI      12.01000
+MASS    -1 CP      12.01000
+MASS    -1 CS      12.01000
+MASS    -1 CN      12.01000
 MASS    -1 CV      12.01000
 MASS    -1 CW      12.01000
-MASS    -1 CG      12.01000
 MASS    -1 CX      12.01000
 MASS    -1 CY      12.01000
-MASS    -1 CZ      12.01000
 MASS    -1 C5      12.01000
 MASS    -1 C4      12.01000
 MASS    -1 C0      40.08000
-MASS    -1 H        1.00800
-MASS    -1 HC       1.00800
-MASS    -1 H1       1.00800
-MASS    -1 H2       1.00800
 MASS    -1 H3       1.00800
-MASS    -1 HA       1.00800
-MASS    -1 H4       1.00800
-MASS    -1 H5       1.00800
-MASS    -1 HO       1.00800
 MASS    -1 HS       1.00800
-MASS    -1 HP       1.00800
 MASS    -1 HZ       1.00800
 MASS    -1 F       19.00000
 MASS    -1 CL      35.45000
 MASS    -1 BR      79.90000
 MASS    -1 I      126.90000
 MASS    -1 MG      24.30500
-MASS    -1 N       14.01000
-MASS    -1 NA      14.01000
-MASS    -1 NB      14.01000
-MASS    -1 NC      14.01000
-MASS    -1 N2      14.01000
-MASS    -1 N3      14.01000
-MASS    -1 NT      14.01000
-MASS    -1 NG      14.01000
-MASS    -1 NY      14.01000
-MASS    -1 O       16.00000
-MASS    -1 O2      16.00000
-MASS    -1 OH      16.00000
-MASS    -1 OS      16.00000
 MASS    -1 OP      16.00000
-MASS    -1 P       30.97000
-MASS    -1 S       32.06000
 MASS    -1 SH      32.06000
 MASS    -1 CO      12.01000
 MASS    -1 2C      12.01000
@@ -274,57 +278,113 @@ MASS    -1 TH4P   232.04000
 MASS    -1 EP       0.00000
 
 BONDS
-C      C       310.00     1.5250
-C      CA      469.00     1.4090
-C      CB      447.00     1.4190
 C      CM      410.00     1.4440
-C      CS      410.00     1.4440
 C      CT      317.00     1.5220
-C      CX      317.00     1.5220
 C      N       490.00     1.3350
 C      NG      424.00     1.3830
 C      NA      418.00     1.3880
 C      NC      457.00     1.3580
-C      O       570.00     1.2290
-C      O2      656.00     1.2500
 C      OH      450.00     1.3640
 C      OS      450.00     1.3230
-C      H4      367.00     1.0800
-C      H5      367.00     1.0800
-CA     CA      469.00     1.4000
-CA     CB      469.00     1.4040
+CG     CB      388.00     1.4590
+CG     CT      317.00     1.4950
+CA     CG      411.70     1.3500
 CA     CM      427.00     1.4330
-CA     CS      427.00     1.4330
-CA     CN      469.00     1.4000
 CA     CT      317.00     1.5100
-CA     HA      367.00     1.0800
 CA     H4      367.00     1.0800
+CA     H5      344.30     1.0730
+CA     NG      411.10     1.3770
 CA     N2      481.00     1.3400
 CA     NA      427.00     1.3810
 CA     NC      483.00     1.3390
-CA     OH      450.00     1.3640
+CA     SS      280.00     1.6880
+CB     C       447.00     1.4190
+CB     CA      469.00     1.4040
 CB     CB      520.00     1.3700
-CB     NG      436.00     1.3740
-CB     NB      414.00     1.3910
-CB     NC      461.00     1.3540
+CB     CM      418.30     1.3940
+CB     NA      411.10     1.3660
+CC     CA      411.70     1.3440
+CC     CT      317.00     1.5040
+CK     H5      367.00     1.0800
+CK     NB      529.00     1.3040
+CM     CM      549.00     1.3500
+CM     CT      317.00     1.5100
+CM     CZ      625.00     1.3500
+CM     H4      367.00     1.0800
+CM     HA      367.00     1.0800
+CM     N       390.50     1.2670
+CM     N2      449.00     1.3890
+CM     NT      486.30     1.3660
+CM     OH      425.40     1.3460
+CM     OS      480.00     1.2400
+CM     SS      280.00     1.6510
+CQ     CT      328.30     1.5040
+CQ     H5      367.00     1.0800
+CQ     S       280.00     1.7690
+CR     H5      367.00     1.0800
+CR     NG      411.10     1.3020
+CT     CT      310.00     1.5260
+CT     H1      340.00     1.0900
+CT     H2      340.00     1.0900
+CT     HC      340.00     1.0900
+CT     HP      340.00     1.0900
+CT     N       337.00     1.4490
+CT     NG      337.00     1.4750
+CT     N2      337.00     1.4630
+CT     N3      367.00     1.4710
+CT     NT      367.00     1.4710
+CT     O       422.60     1.4250
+CT     OH      320.00     1.4100
+CT     SO      225.80     1.7940
+CZ     NY      101.40     1.1360
+N      H       434.00     1.0100
+NG     CB      436.00     1.3740
+NG     CK      440.00     1.3710
+NG     CM      448.00     1.3650
+NG     CZ      452.00     1.4560
+NG     H       434.00     1.0100
+N2     CB      449.00     1.3670
+N2     CK      449.00     1.3820
+N2     CR      449.00     1.3340
+N2     H       434.00     1.0100
+N3     H       434.00     1.0100
+NA     CM      411.10     1.3770
+NA     H       434.00     1.0100
+NB     CB      414.00     1.3910
+NB     CC      410.00     1.3940
+NC     CB      461.00     1.3540
+NC     CM      431.60     1.3090
+NC     CQ      502.00     1.3240
+NT     H       434.00     1.0100
+OH     HO      553.00     0.9600
+OS     CT      320.00     1.4100
+P      O       456.40     1.4860
+P      OH      230.00     1.6100
+P      OS      230.00     1.6100
+S      CT      227.00     1.8100
+SO     O       398.50     1.4540
+C      C       310.00     1.5250
+C      CA      469.00     1.4090
+C      CS      410.00     1.4440
+C      CX      317.00     1.5220
+C      O       570.00     1.2290
+C      O2      656.00     1.2500
+C      H4      367.00     1.0800
+C      H5      367.00     1.0800
+CA     CA      469.00     1.4000
+CA     CS      427.00     1.4330
+CA     CN      469.00     1.4000
+CA     HA      367.00     1.0800
+CA     OH      450.00     1.3640
 CD     HA      367.00     1.0800
 CD     CD      469.00     1.4000
 CD     CM      549.00     1.3500
 CD     CS      549.00     1.3500
 CD     CT      317.00     1.5100
-CK     H5      367.00     1.0800
-CK     NG      440.00     1.3710
-CK     NB      529.00     1.3040
 CP     H5      367.00     1.0800
 CP     NG      440.00     1.3710
 CP     NB      529.00     1.3040
-CM     CM      549.00     1.3500
-CM     CT      317.00     1.5100
-CM     HA      367.00     1.0800
-CM     H4      367.00     1.0800
 CM     H5      367.00     1.0800
-CM     NG      448.00     1.3650
-CM     OS      480.00     1.2400
 CS     CS      549.00     1.3500
 CS     CT      317.00     1.5100
 CS     HA      367.00     1.0800
@@ -332,41 +392,21 @@ CS     H4      367.00     1.0800
 CS     H5      367.00     1.0800
 CS     NG      448.00     1.3650
 CS     OS      480.00     1.2400
-CQ     H5      367.00     1.0800
-CQ     NC      502.00     1.3240
-CT     CT      310.00     1.5260
 CX     CT      310.00     1.5260
-CT     HC      340.00     1.0900
-CT     H1      340.00     1.0900
 CX     H1      340.00     1.0900
-CT     H2      340.00     1.0900
 CT     H3      340.00     1.0900
-CT     HP      340.00     1.0900
 CX     HP      340.00     1.0900
-CT     NG      337.00     1.4750
-CT     N2      337.00     1.4630
-CT     OH      320.00     1.4100
-CT     OS      320.00     1.4100
 CG     HC      367.00     1.0800
-CG     CB      388.00     1.4590
-CG     CT      317.00     1.4950
 CG     CW      546.00     1.3520
 CB     CN      447.00     1.4190
-CC     CT      317.00     1.5040
 CC     CV      512.00     1.3750
 CC     CW      518.00     1.3710
 CC     NA      422.00     1.3850
-CC     NB      410.00     1.3940
 CN     NA      428.00     1.3800
-CR     H5      367.00     1.0800
 CR     NA      477.00     1.3430
 CR     NB      488.00     1.3350
-CT     N       337.00     1.4490
 CX     N       337.00     1.4490
-CT     N3      367.00     1.4710
 CX     N3      367.00     1.4710
-CT     NT      367.00     1.4710
-CT     S       227.00     1.8100
 CT     SH      237.00     1.8100
 CT     CY      400.00     1.4580
 CT     CZ      400.00     1.4590
@@ -379,16 +419,7 @@ CZ     CZ      600.00     1.2060
 CZ     HZ      400.00     1.0560
 OP     P       525.00     1.4800
 O2     P       525.00     1.4800
-OH     P       230.00     1.6100
-OS     P       230.00     1.6100
 NA     P       250.00     1.8400
-H      N2      434.00     1.0100
-H      NG      434.00     1.0100
-H      NA      434.00     1.0100
-H      N       434.00     1.0100
-H      N3      434.00     1.0100
-H      NT      434.00     1.0100
-HO     OH      553.00     0.9600
 HO     OS      553.00     0.9600
 HS     SH      274.00     1.3360
 S      S       166.00     2.0380
@@ -454,6 +485,279 @@ OW     HW      553.00     0.9572
 HW     HW      553.00     1.5136
 
 ANGLES
+C      CB     CB       63.00   119.20
+C      CM     CM       63.00   120.70
+C      CM     CT       70.00   119.70
+C      CM     HA       50.00   119.70
+C      CM     OH       70.30   117.00
+C      CM     OS       69.90   118.74
+C      CT     CT       63.00   111.10
+C      CT     H1       50.00   109.50
+C      CT     HC       50.00   109.50
+C      CT     N        63.00   110.10
+C      CT     NT       65.80   111.16
+C      CT     OH       68.40   109.60
+C      N      C        67.40   128.24
+C      N      CT       50.00   121.90
+C      N      H        50.00   120.00
+C      NG     C        64.70   124.78
+C      NG     CA       64.30   132.61
+C      NG     CB       64.30   126.14
+C      NG     CM       70.00   121.60
+C      NG     CT       70.00   117.60
+C      NG     CZ       65.30   124.58
+C      NA     C        70.00   126.40
+C      NA     CA       70.00   125.20
+C      NA     CM       64.30   124.78
+C      NA     H        50.00   116.80
+C      NC     CA       70.00   120.50
+C      OH     HO       50.00   113.00
+C      OS     CT       60.00   117.00
+CG     CA     H4       50.00   129.55
+CG     CB     C        67.90   134.43
+CG     CB     CB       67.90   107.22
+CG     CM     N        68.80   117.78
+CG     CM     NT       70.30   116.15
+CG     CT     H1       47.00   109.17
+CG     CT     NT       66.50   110.93
+CG     CZ     NY       63.10   178.08
+CA     CG     CB       67.70   105.74
+CA     CG     CM       67.70   122.33
+CA     CG     CT       64.30   127.53
+CA     CG     CZ       70.30   124.75
+CA     CB     CB       63.00   117.30
+CA     CM     C        67.90   125.27
+CA     CM     CM       63.00   117.00
+CA     CM     CT       64.30   122.72
+CA     CM     HA       50.00   123.30
+CA     CT     CT       63.00   114.00
+CA     CT     HC       50.00   109.50
+CA     NG     CB       67.80   105.10
+CA     NG     CM       67.80   120.75
+CA     NG     CT       64.20   122.26
+CA     NG     CZ       64.30   111.96
+CA     NG     H        47.60   114.15
+CA     N2     CB       66.20   113.22
+CA     N2     CM       66.20   120.80
+CA     N2     CT       50.00   123.20
+CA     N2     H        50.00   120.00
+CA     NA     H        50.00   118.00
+CA     NC     CA       70.70   121.58
+CA     NC     CB       70.00   112.20
+CA     NC     CM       69.40   120.18
+CA     NC     CQ       70.00   118.60
+CB     C      NG       69.50   110.71
+CB     C      NA       70.00   111.30
+CB     C      O        80.00   128.80
+CB     CG     CM       67.90   132.14
+CB     CG     CT       70.00   128.60
+CB     CG     CZ       70.30   128.83
+CB     CA     NG       69.80   123.50
+CB     CA     N2       70.00   123.50
+CB     CA     NC       70.00   117.30
+CB     CB     NA       69.80   124.67
+CB     CB     NC       70.00   127.70
+CB     CM     N2       68.60   119.00
+CB     NG     CT       70.00   125.80
+CB     N2     CB       66.20   115.42
+CB     NA     CB       67.80   116.77
+CB     NA     H        47.60   121.62
+CB     NB     CC       68.60   105.10
+CC     CA     CT       64.30   131.00
+CC     CA     H4       50.00   133.32
+CC     CT     HC       50.00   109.50
+CK     NG     CB       70.00   105.40
+CK     N2     CB       66.20   104.89
+CK     NB     CB       70.00   103.80
+CM     C      H4       50.00   115.00
+CM     C      NG       69.50   114.80
+CM     C      NA       70.00   114.10
+CM     C      O        80.00   125.30
+CM     CB     CB       67.90   118.38
+CM     CM     CM       67.90   118.34
+CM     CM     CT       70.00   119.70
+CM     CM     H4       50.00   119.70
+CM     CM     HA       50.00   119.70
+CM     CM     NG       70.00   121.20
+CM     CM     NA       69.80   113.79
+CM     CM     OH       71.60   123.63
+CM     CM     OS       80.00   125.00
+CM     CT     C        64.60   115.31
+CM     CT     H1       50.00   109.50
+CM     CT     HC       50.00   109.50
+CM     CT     NT       66.50   112.16
+CM     CT     OH       68.30   115.74
+CM     N      H        47.40   111.59
+CM     NG     CT       70.00   121.20
+CM     N2     CT       62.82   119.95
+CM     N2     H        49.10   126.81
+CM     NA     H        47.60   120.09
+CM     NT     H        49.10   118.20
+CM     OH     HO       49.90   107.84
+CM     OS     CT       60.00   117.00
+CQ     CT     HC       47.00   110.08
+CQ     NC     CB       70.00   111.00
+CQ     S      CT       63.40   102.43
+CR     NG     CB       67.80   107.05
+CR     NG     CT       64.20   126.96
+CR     N2     CB       66.20   107.53
+CT     C      N        70.00   116.60
+CT     C      O        80.00   120.40
+CT     C      OH       80.00   110.00
+CT     C      OS       80.00   115.00
+CT     CC     CA       64.30   129.28
+CT     CM     CT       62.70   113.97
+CT     CM     HA       50.00   120.00
+CT     CT     CM       63.00   111.00
+CT     CT     CT       40.00   109.50
+CT     CT     H1       50.00   109.50
+CT     CT     H2       50.00   109.50
+CT     CT     HC       50.00   109.50
+CT     CT     HP       50.00   109.50
+CT     CT     N        80.00   109.70
+CT     CT     NG       50.00   109.50
+CT     CT     N2       80.00   111.20
+CT     CT     N3       80.00   111.20
+CT     CT     NT       80.00   111.20
+CT     CT     O        62.60   111.46
+CT     CT     OH       50.00   109.50
+CT     CT     SO       61.10   112.92
+CT     N      CT       50.00   118.00
+CT     N      H        50.00   118.04
+CT     NG     CK       70.00   128.80
+CT     N2     CB       62.82   125.88
+CT     N2     CK       62.82   124.77
+CT     N2     CR       62.82   127.04
+CT     N2     CT       64.00   119.30
+CT     N3     H        50.00   109.50
+CT     NT     CT       50.00   109.50
+CT     NT     H        50.00   109.50
+CT     OH     HO       55.00   108.50
+CT     OS     CT       60.00   109.50
+CT     SO     O        64.70   104.22
+CZ     CM     CT       65.10   130.44
+H      N      H        35.00   120.00
+H      NG     C        50.00   119.20
+H      N2     CT       50.00   118.40
+H      N2     H        35.00   120.00
+H      N3     H        35.00   109.50
+H      NT     H        35.00   109.50
+H1     CT     H1       35.00   109.50
+H1     CT     NT       50.00   109.50
+H1     CT     O        47.50   104.39
+H1     CT     SO       42.50   107.04
+H4     C      O        50.00   120.00
+HC     CT     HC       35.00   109.50
+HP     CT     C        50.00   109.50
+HP     CT     N3       50.00   109.50
+N      C      N        75.40   115.30
+N      C      O        80.00   122.90
+N      C      OS       74.70   111.54
+N      CT     H1       50.00   109.50
+N      CT     H2       49.80   106.67
+NG     C      CT       65.10   120.29
+NG     C      N        73.40   117.51
+NG     C      NG       73.20   116.63
+NG     C      NA       70.00   115.40
+NG     C      NC       70.00   118.60
+NG     C      O        80.00   120.90
+NG     CA     CG       69.80   109.93
+NG     CA     CC       69.80   105.09
+NG     CA     CM       69.80   116.25
+NG     CA     CT       65.00   124.05
+NG     CA     H4       51.20   120.55
+NG     CA     H5       51.20   115.18
+NG     CA     N2       73.10   117.06
+NG     CA     NA       73.70   115.20
+NG     CA     NC       71.70   120.47
+NG     CA     SS       67.30   123.87
+NG     CB     C        69.90   132.30
+NG     CB     CB       70.00   106.20
+NG     CB     N2       73.10   121.33
+NG     CB     NA       73.70   119.60
+NG     CB     NB       71.70   113.55
+NG     CB     NC       70.00   126.20
+NG     CK     H5       50.00   123.05
+NG     CK     NB       70.00   113.90
+NG     CM     H4       50.00   119.10
+NG     CM     N2       73.10   125.43
+NG     CR     H5       51.20   124.74
+NG     CT     H1       50.00   109.50
+NG     CT     H2       50.00   109.50
+NG     CZ     CM       58.00   101.03
+N2     CA     CM       70.00   120.10
+N2     CA     H5       52.40   114.78
+N2     CA     N2       70.00   120.00
+N2     CA     NC       70.00   119.30
+N2     CB     CB       68.60   111.44
+N2     CB     N2       72.90   129.38
+N2     CB     NA       73.10   128.12
+N2     CB     NC       73.90   125.22
+N2     CK     H5       52.40   120.60
+N2     CK     NB       73.90   113.55
+N2     CM     CM       68.60   120.81
+N2     CM     CT       64.00   118.66
+N2     CM     CZ       72.60   110.90
+N2     CM     H4       52.40   115.30
+N2     CM     N2       72.90   122.00
+N2     CR     H5       52.40   124.13
+N2     CR     NG       73.10   111.13
+N2     CT     CM       66.50   109.17
+N2     CT     H1       50.00   109.50
+N2     CT     H2       49.40   106.64
+N3     CT     C        80.00   111.20
+NA     C      NA       73.20   113.29
+NA     C      O        80.00   120.60
+NA     CA     H5       51.20   115.50
+NA     CA     N2       70.00   116.00
+NA     CA     NC       70.00   123.30
+NA     CM     H4       51.20   114.80
+NA     CM     SS       67.30   121.32
+NB     CB     C        70.00   130.00
+NB     CB     CA       70.00   132.40
+NB     CB     CB       70.00   110.40
+NB     CB     CM       70.00   130.68
+NB     CB     N2       73.90   125.28
+NB     CB     NA       71.70   126.47
+NB     CC     CA       70.00   111.16
+NB     CC     CT       70.00   120.00
+NB     CK     H5       50.00   123.05
+NC     CA     CM       70.00   121.50
+NC     CA     H5       52.40   119.04
+NC     CM     CM       70.00   122.00
+NC     CM     N2       73.90   117.51
+NC     CQ     CT       67.10   116.47
+NC     CQ     H5       50.00   115.45
+NC     CQ     NC       70.00   129.10
+NC     CQ     S        62.90   115.93
+NT     CM     N        71.80   126.00
+O      C      NC       80.00   122.50
+O      C      O        80.00   126.00
+O      C      OS       80.00   125.00
+O      P      O        45.10   119.57
+O      P      OS       43.10   108.42
+O      SO     O        69.80   114.17
+O2     P      O2      140.00   119.90
+O2     P      OS      100.00   108.23
+OH     C      O        80.00   120.00
+OH     CT     H1       50.00   109.50
+OH     P      O2       45.00   108.23
+OS     CT     C        60.00   109.50
+OS     CT     CM       50.00   109.50
+OS     CT     CT       50.00   109.50
+OS     CT     H1       50.00   109.50
+OS     CT     H2       50.00   109.50
+OS     CT     N        70.10   109.38
+OS     CT     NG       50.00   109.50
+OS     CT     N2       70.30   109.39
+OS     CT     OS      160.00   101.00
+OS     P      OH       45.00   102.60
+P      OH     HO       45.00   108.50
+P      OS     CT      100.00   120.50
+S      CT     H1       50.00   109.50
+SS     CA     NA       67.30   120.53
+SS     CA     NC       62.90   121.65
+SS     CM     CM       63.90   124.90
 C      C      O        80.00   120.00
 C      C      OH       80.00   120.00
 CA     C      CA       63.00   120.00
@@ -462,37 +766,18 @@ CA     C      OS       70.00   120.00
 CC     NA     P        76.70   125.10
 CR     NA     P        76.70   125.10
 NA     P      OP       42.90   102.38
-CB     C      NA       70.00   111.30
-CB     C      O        80.00   128.80
-CM     C      NA       70.00   114.10
-CM     C      O        80.00   125.30
 CS     C      NA       70.00   114.10
 CS     C      O        80.00   125.30
-CT     C      O        80.00   120.40
 CX     C      O        80.00   120.40
 CT     C      O2       70.00   117.00
 CX     C      O2       70.00   117.00
-CT     C      N        70.00   116.60
 CX     C      N        70.00   116.60
 CT     C      CT       63.00   117.00
-CT     C      OS       80.00   115.00
-CT     C      OH       80.00   110.00
 CX     C      OH       80.00   110.00
-NG     C      NA       70.00   115.40
-NG     C      NC       70.00   118.60
-NG     C      O        80.00   120.90
-NA     C      O        80.00   120.60
-NC     C      O        80.00   122.50
-N      C      O        80.00   122.90
-O      C      O        80.00   126.00
-O      C      OH       80.00   120.00
-O      C      OS       80.00   125.00
 O2     C      O2       80.00   126.00
 H4     C      C        50.00   120.00
-H4     C      CM       50.00   115.00
 H4     C      CS       50.00   115.00
 H4     C      CT       50.00   115.00
-H4     C      O        50.00   120.00
 H4     C      OH       50.00   120.00
 H5     C      N        50.00   120.00
 H5     C      O        50.00   119.00
@@ -509,32 +794,16 @@ CA     CA     OH       70.00   120.00
 CA     CA     CN       63.00   120.00
 CB     CA     HA       50.00   120.00
 CB     CA     H4       50.00   120.00
-CB     CA     N2       70.00   123.50
-CB     CA     NC       70.00   117.30
-CM     CA     N2       70.00   120.10
-CM     CA     NC       70.00   121.50
 CS     CA     N2       70.00   120.10
 CS     CA     NC       70.00   121.50
 CN     CA     HA       50.00   120.00
-NA     CA     NC       70.00   123.30
-N2     CA     NA       70.00   116.00
-N2     CA     NC       70.00   119.30
-N2     CA     N2       70.00   120.00
 F      CA     CA       70.00   121.00
 CL     CA     CA       70.00   118.80
 BR     CA     CA       70.00   118.80
 I      CA     CA       70.00   118.80
-C      CB     CB       63.00   119.20
-C      CB     NB       70.00   130.00
-CA     CB     CB       63.00   117.30
-CA     CB     NB       70.00   132.40
-CB     CB     NG       70.00   106.20
-CB     CB     NB       70.00   110.40
-CB     CB     NC       70.00   127.70
 CG     CB     CA       63.00   134.90
 CG     CB     CN       63.00   108.80
 CA     CB     CN       63.00   116.20
-NG     CB     NC       70.00   126.20
 CD     CD     CM       63.00   120.00
 CD     CD     CS       63.00   120.00
 CD     CD     CT       70.00   120.00
@@ -544,29 +813,14 @@ HA     CD     HA       35.00   119.00
 HA     CD     CD       50.00   120.00
 HA     CD     CM       50.00   120.00
 HA     CD     CS       50.00   120.00
-H5     CK     NG       50.00   123.05
-H5     CK     NB       50.00   123.05
-NG     CK     NB       70.00   113.90
 H5     CP     NG       50.00   123.05
 H5     CP     NB       50.00   123.05
 NG     CP     NB       70.00   113.90
-C      CM     CM       63.00   120.70
-C      CM     CT       70.00   119.70
-C      CM     HA       50.00   119.70
 C      CM     H4       50.00   119.70
-CA     CM     CM       63.00   117.00
-CA     CM     HA       50.00   123.30
 CA     CM     H4       50.00   123.30
-CM     CM     CT       70.00   119.70
-CM     CM     HA       50.00   119.70
-CM     CM     H4       50.00   119.70
-CM     CM     NG       70.00   121.20
-CM     CM     OS       80.00   125.00
-H4     CM     NG       50.00   119.10
 H4     CM     OS       50.00   113.00
 HA     CM     HA       35.00   120.00
 HA     CM     CD       50.00   120.00
-HA     CM     CT       50.00   120.00
 C      CS     CS       63.00   120.70
 C      CS     CT       70.00   119.70
 C      CS     HA       50.00   119.70
@@ -584,91 +838,49 @@ H4     CS     OS       50.00   113.00
 HA     CS     HA       35.00   120.00
 HA     CS     CD       50.00   120.00
 HA     CS     CT       50.00   120.00
-NC     CQ     NC       70.00   129.10
-H5     CQ     NC       50.00   115.45
-H1     CT     H1       35.00   109.50
 H1     CX     H1       35.00   109.50
-H1     CT     NG       50.00   109.50
-H1     CT     OH       50.00   109.50
-H1     CT     OS       50.00   109.50
-H1     CT     CM       50.00   109.50
 H1     CT     CS       50.00   109.50
 H1     CT     CY       50.00   110.00
 H1     CT     CZ       50.00   110.00
-H1     CT     N        50.00   109.50
 H1     CX     N        50.00   109.50
-H1     CT     S        50.00   109.50
 H1     CT     SH       50.00   109.50
-H1     CT     N2       50.00   109.50
-H1     CT     NT       50.00   109.50
 H2     CT     H2       35.00   109.50
-H2     CT     NG       50.00   109.50
-H2     CT     OS       50.00   109.50
 HP     CT     HP       35.00   109.50
 HP     CX     HP       35.00   109.50
-HP     CT     N3       50.00   109.50
 HP     CX     N3       50.00   109.50
-HC     CT     HC       35.00   109.50
-HC     CT     CM       50.00   109.50
 HC     CT     CS       50.00   109.50
 HC     CT     CD       50.00   109.50
 HC     CT     CZ       50.00   110.00
-C      CT     H1       50.00   109.50
 C      CX     H1       50.00   109.50
-C      CT     HP       50.00   109.50
 C      CX     HP       50.00   109.50
-C      CT     HC       50.00   109.50
-C      CT     N        63.00   110.10
 C      CX     N        63.00   110.10
-C      CT     N3       80.00   111.20
 C      CX     N3       80.00   111.20
-C      CT     CT       63.00   111.10
 C      CT     CX       63.00   111.10
 C      CX     CT       63.00   111.10
-C      CT     OS       60.00   109.50
-CA     CT     HC       50.00   109.50
 CC     CT     CT       63.00   113.10
 CC     CT     CX       63.00   113.10
-CC     CT     HC       50.00   109.50
-CM     CT     CT       63.00   111.00
-CM     CT     OS       50.00   109.50
 CS     CT     CT       63.00   111.00
 CS     CT     OS       50.00   109.50
-CT     CT     CT       40.00   109.50
 CT     CT     CX       40.00   109.50
-CT     CT     HC       50.00   109.50
 CX     CT     HC       50.00   109.50
-CT     CT     H1       50.00   109.50
 CT     CX     H1       50.00   109.50
 CX     CT     H1       50.00   109.50
-CT     CT     H2       50.00   109.50
-CT     CT     HP       50.00   109.50
 CT     CX     HP       50.00   109.50
-CT     CT     NG       50.00   109.50
-CT     CT     OH       50.00   109.50
 CX     CT     OH       50.00   109.50
-CT     CT     OS       50.00   109.50
 CT     CT     S        50.00   114.70
 CX     CT     S        50.00   114.70
 CT     CT     SH       50.00   108.60
 CX     CT     SH       50.00   108.60
-CT     CT     CA       63.00   114.00
 CX     CT     CA       63.00   114.00
-CT     CT     N2       80.00   111.20
-CT     CT     N        80.00   109.70
 CT     CX     N        80.00   109.70
-CT     CT     N3       80.00   111.20
 CT     CX     N3       80.00   111.20
-CT     CT     NT       80.00   111.20
 CT     CT     CY       63.00   110.00
 CT     CT     CZ       63.00   110.00
 CG     CT     CT       63.00   115.60
 CG     CT     CX       63.00   115.60
 CG     CT     HC       50.00   109.50
-OS     CT     OS      160.00   101.00
 OS     CT     CY       50.00   110.00
 OS     CT     CZ       50.00   110.00
-OS     CT     NG       50.00   109.50
 F      CT     F        77.00   109.10
 F      CT     H1       50.00   109.50
 F      CT     CT       50.00   109.00
@@ -680,7 +892,6 @@ BR     CT     H1       50.00   106.50
 I      CT     CT       50.00   106.00
 CT     CC     NA       70.00   120.00
 CT     CC     CV       70.00   120.00
-CT     CC     NB       70.00   120.00
 CV     CC     NA       70.00   120.00
 CW     CC     NA       70.00   120.00
 CW     CC     NB       70.00   120.00
@@ -697,7 +908,6 @@ CC     CW     NA       70.00   120.00
 CG     CW     H4       50.00   120.00
 CG     CW     NA       70.00   108.70
 H4     CW     NA       50.00   120.00
-CB     CG     CT       70.00   128.60
 CB     CG     CW       63.00   106.40
 CT     CG     CW       70.00   125.00
 CA     CN     CB       63.00   122.70
@@ -706,46 +916,21 @@ CB     CN     NA       70.00   104.40
 CT     CY     NY       80.00   180.00
 CT     CZ     CZ       80.00   180.00
 CZ     CZ     HZ       50.00   180.00
-C      N      CT       50.00   121.90
 C      N      CX       50.00   121.90
-C      N      H        50.00   120.00
-CT     N      H        50.00   118.04
 CX     N      H        50.00   118.04
-CT     N      CT       50.00   118.00
 CT     N      CX       50.00   118.00
-H      N      H        35.00   120.00
-C      NG     CM       70.00   121.60
 C      NG     CS       70.00   121.60
-C      NG     CT       70.00   117.60
-C      NG     H        50.00   119.20
-CB     NG     CK       70.00   105.40
 CB     NG     CP       70.00   105.40
-CB     NG     CT       70.00   125.80
 CB     NG     H        50.00   125.80
-CK     NG     CT       70.00   128.80
 CK     NG     H        50.00   128.80
 CP     NG     CT       70.00   128.80
 CP     NG     H        50.00   128.80
-CM     NG     CT       70.00   121.20
 CM     NG     H        50.00   121.20
 CS     NG     CT       70.00   121.20
 CS     NG     H        50.00   121.20
-CA     N2     H        50.00   120.00
-CA     N2     CT       50.00   123.20
-CT     N2     H        50.00   118.40
-H      N2     H        35.00   120.00
-CT     N3     H        50.00   109.50
 CX     N3     H        50.00   109.50
 CT     N3     CT       50.00   109.50
 CT     N3     CX       50.00   109.50
-H      N3     H        35.00   109.50
-CT     NT     H        50.00   109.50
-CT     NT     CT       50.00   109.50
-H      NT     H        35.00   109.50
-C      NA     C        70.00   126.40
-C      NA     CA       70.00   125.20
-C      NA     H        50.00   116.80
-CA     NA     H        50.00   118.00
 CC     NA     CR       70.00   120.00
 CC     NA     H        50.00   120.00
 CR     NA     CW       70.00   120.00
@@ -753,31 +938,15 @@ CR     NA     H        50.00   120.00
 CW     NA     H        50.00   120.00
 CN     NA     CW       70.00   111.60
 CN     NA     H        50.00   123.10
-CB     NB     CK       70.00   103.80
 CB     NB     CP       70.00   103.80
 CC     NB     CR       70.00   117.00
 CR     NB     CV       70.00   117.00
-C      NC     CA       70.00   120.50
-CA     NC     CB       70.00   112.20
-CA     NC     CQ       70.00   118.60
-CB     NC     CQ       70.00   111.00
-C      OH     HO       50.00   113.00
 CA     OH     HO       50.00   113.00
-CT     OH     HO       55.00   108.50
-HO     OH     P        45.00   108.50
-C      OS     CT       60.00   117.00
-CM     OS     CT       60.00   117.00
 CS     OS     CT       60.00   117.00
-CT     OS     CT       60.00   109.50
-CT     OS     P       100.00   120.50
 C      OS     P       100.00   120.50
 P      OS     P       100.00   120.50
-O2     P      OH       45.00   108.23
-O2     P      O2      140.00   119.90
 OP     P      OP      140.00   119.90
 OP     P      OS      100.00   108.23
-O2     P      OS      100.00   108.23
-OH     P      OS       45.00   102.60
 OS     P      OS       45.00   102.60
 CT     S      CT       62.00    98.90
 CT     S      S        68.00   103.70
@@ -947,6 +1116,629 @@ HC     3C     2C       50.00   109.50
 HW     OW     HW      100.00   104.52
 
 DIHEDRALS
+C      CB     CG     CM          6.6500  2   180.00
+C      CB     CG     CT          6.6500  2   180.00
+C      CB     CG     CZ          6.6500  2   180.00
+C      CB     CB     NA          6.6500  2   180.00
+C      CB     CB     NC          6.6500  2   180.00
+C      CB     NG     CT          0.6250  2   180.00
+C      CM     CM     H4          6.6500  2   180.00
+C      CM     CM     NG          6.6500  2   180.00
+C      CM     CM     NA          6.6500  2   180.00
+C      CM     CT     C           0.3000  3     0.00
+C      CM     CT     H1          0.1560  3     0.00
+C      CM     CT     HC          0.1560  3     0.00
+C      CM     CT     NT          0.3000  3     0.00
+C      CM     CT     OH          0.0000  2     0.00
+C      CM     OH     HO          1.0500  2   180.00
+C      CM     OS     CT          1.0500  2   180.00
+C      CT     CT     C           0.1560  3     0.00
+C      CT     CT     CT          0.1560  3     0.00
+C      CT     CT     H1          0.1560  3     0.00
+C      CT     CT     HC          0.1560  3     0.00
+C      CT     CT     OH          0.1560  3     0.00
+C      CT     N      C           0.0000  2     0.00
+C      CT     N      H           0.0000  2     0.00
+C      CT     NT     H           0.3000  3     0.00
+C      CT     OH     HO          0.1670  3     0.00
+C      N      C      CT          2.5000  2   180.00
+C      N      C      O           2.5000  2   180.00
+C      N      CT     CT          0.0000  4     0.00
+C      N      CT     CT          0.4000  3     0.00
+C      N      CT     CT          2.0000  2     0.00
+C      N      CT     CT          2.0000  1     0.00
+C      N      CT     H1          0.1560  3     0.00
+C      N      CT     H2          0.1560  3     0.00
+C      NG     C      CM          0.3500  4   180.00
+C      NG     C      NG          1.4500  2   180.00
+C      NG     C      NA          0.3500  4   180.00
+C      NG     C      O           1.4500  2   180.00
+C      NG     CA     CC          0.6250  2   180.00
+C      NG     CA     CM          0.6250  2   180.00
+C      NG     CA     CT          0.6250  2   180.00
+C      NG     CA     H4          0.6250  2   180.00
+C      NG     CA     H5          0.6250  2   180.00
+C      NG     CA     N2          0.6250  2   180.00
+C      NG     CA     NC          0.6250  2   180.00
+C      NG     CB     N2          2.0000  2   180.00
+C      NG     CB     NA          0.6250  2   180.00
+C      NG     CB     NB          2.0000  2   180.00
+C      NG     CM     CM          0.6250  2   180.00
+C      NG     CM     H4          0.6250  2   180.00
+C      NG     CM     N2          0.6250  2   180.00
+C      NG     CT     CT          0.3000  3     0.00
+C      NG     CT     H1          0.0000  2     0.00
+C      NG     CT     H2          0.1560  3     0.00
+C      NG     CZ     CM          0.0000  2   180.00
+C      NA     C      CM          2.0000  2   180.00
+C      NA     C      NG          2.0000  2   180.00
+C      NA     C      NA          2.0000  2   180.00
+C      NA     C      O           2.0000  2   180.00
+C      NA     CA     H5          0.6250  2   180.00
+C      NA     CA     N2          0.6250  2   180.00
+C      NA     CA     NC          0.6250  2   180.00
+C      NA     CM     CM          0.6250  2   180.00
+C      NA     CM     H4          0.6250  2   180.00
+C      NA     CM     SS          0.6250  2   180.00
+C      NC     CA     CM          4.1500  2   180.00
+C      NC     CA     NG          4.1500  2   180.00
+C      NC     CA     N2          4.1500  2   180.00
+C      OS     CT     H1          0.3830  3     0.00
+CG     CA     NG     CB          0.6250  2   180.00
+CG     CB     C      NA          2.1750  2   180.00
+CG     CB     C      O           2.1750  2   180.00
+CG     CB     CB     NC          4.0000  2   180.00
+CG     CM     N      H           0.6500  2   180.00
+CG     CM     NT     H           0.3000  2   180.00
+CG     CT     NT     CT          0.3000  3     0.00
+CG     CT     NT     H           0.3000  3     0.00
+CA     CG     CB     C           6.6500  2   180.00
+CA     CG     CB     CB          4.0000  2   180.00
+CA     CG     CM     N           6.6500  2   180.00
+CA     CG     CM     NT          6.6500  2   180.00
+CA     CG     CT     H1          0.0000  2     0.00
+CA     CG     CT     NT          0.0000  2     0.00
+CA     CG     CZ     NY          0.0000  2   180.00
+CA     CB     CB     NC          4.0000  2   180.00
+CA     CM     C      H4          2.1750  2   180.00
+CA     CM     C      O           2.1750  2   180.00
+CA     CM     CM     H4          4.0000  2   180.00
+CA     CM     CT     H1          0.0000  2     0.00
+CA     CM     CT     HC          0.1560  3     0.00
+CA     CM     CT     OH          0.0000  2     0.00
+CA     CT     CT     C           0.1560  3     0.00
+CA     CT     CT     CT          0.1560  3     0.00
+CA     CT     CT     H1          0.1560  3     0.00
+CA     CT     CT     HC          0.1560  3     0.00
+CA     CT     CT     OH          0.1560  3     0.00
+CA     NG     C      CT          0.3500  4   180.00
+CA     NG     C      N           1.4500  2   180.00
+CA     NG     C      O           2.0000  2   180.00
+CA     NG     CB     CB          0.6250  2   180.00
+CA     NG     CB     N2          0.6250  2   180.00
+CA     NG     CB     NA          0.6250  2   180.00
+CA     NG     CB     NC          0.6250  2   180.00
+CA     NG     CM     CM          0.6250  2   180.00
+CA     NG     CM     H4          0.6250  2   180.00
+CA     NG     CT     H1          0.0000  2     0.00
+CA     NG     CT     H2          0.1560  3     0.00
+CA     NG     CZ     CM          0.0000  2   180.00
+CA     N2     CM     CM          1.0500  2   180.00
+CA     N2     CM     CT          0.3000  2   180.00
+CA     N2     CM     CZ          0.3000  2   180.00
+CA     N2     CM     H4          1.0500  2   180.00
+CA     N2     CT     CM          0.3000  3     0.00
+CA     N2     CT     H1          0.3000  3     0.00
+CA     N2     CT     H2          0.3000  3     0.00
+CA     NA     C      CM          2.0000  2   180.00
+CA     NA     C      O           2.0000  2   180.00
+CA     NC     CA     CM          4.8000  2   180.00
+CA     NC     CA     N2          4.8000  2   180.00
+CA     NC     CM     CM          4.7500  2   180.00
+CA     NC     CM     N2          4.7500  2   180.00
+CA     NC     CQ     CT          4.1500  2   180.00
+CA     NC     CQ     H5          4.7500  2   180.00
+CA     NC     CQ     NC          4.7500  2   180.00
+CA     NC     CQ     S           4.1500  2   180.00
+CB     C      NG     CA          2.0000  2   180.00
+CB     C      NG     CB          2.0000  2   180.00
+CB     C      NG     CT          0.3500  4   180.00
+CB     C      NG     CZ          1.4500  2   180.00
+CB     C      NA     CA          2.0000  2   180.00
+CB     C      NA     H           2.0000  2   180.00
+CB     CG     CA     H4          4.0000  2   180.00
+CB     CG     CM     N           6.6500  2   180.00
+CB     CG     CM     NT          6.6500  2   180.00
+CB     CG     CT     H1          0.0000  2     0.00
+CB     CG     CT     NT          0.0000  2     0.00
+CB     CG     CZ     NY          0.0000  2   180.00
+CB     CA     NG     C           0.6250  2   180.00
+CB     CA     NG     CT          0.6250  2   180.00
+CB     CA     NG     H           0.6250  2   180.00
+CB     CA     N2     CT          0.3000  2   180.00
+CB     CA     N2     H           0.3000  2   180.00
+CB     CA     NC     CQ          4.8000  2   180.00
+CB     CB     CG     CM          4.0000  2   180.00
+CB     CB     CG     CT          6.6500  2   180.00
+CB     CB     N2     CA          1.0500  2   180.00
+CB     CB     N2     CB          2.0000  2   180.00
+CB     CB     NA     CB          0.6250  2   180.00
+CB     CB     NA     H           0.6250  2   180.00
+CB     CB     NC     CA          4.7500  2   180.00
+CB     CB     NC     CQ          4.7500  2   180.00
+CB     CM     N2     CA          1.0500  2   180.00
+CB     CM     N2     CT          0.3000  2   180.00
+CB     CM     N2     H           0.3000  2   180.00
+CB     NG     CA     CC          2.0000  2   180.00
+CB     NG     CA     CT          0.6250  2   180.00
+CB     NG     CA     H4          0.6250  2   180.00
+CB     NG     CK     H5          0.6250  2   180.00
+CB     NG     CT     H1          0.1560  3     0.00
+CB     NG     CT     H2          0.1560  3     0.00
+CB     N2     CK     H5          2.0000  2   180.00
+CB     N2     CR     H5          1.0500  2   180.00
+CB     N2     CT     H1          0.1560  3     0.00
+CB     N2     CT     H2          0.3000  3     0.00
+CB     NB     CC     CA          4.7500  2   180.00
+CB     NB     CC     CT          4.1500  2   180.00
+CB     NB     CK     H5          4.7500  2   180.00
+CB     NC     CA     H5          4.8000  2   180.00
+CB     NC     CQ     CT          4.1500  2   180.00
+CB     NC     CQ     H5          4.7500  2   180.00
+CB     NC     CQ     S           4.1500  2   180.00
+CC     CA     CT     CT          0.3000  3     0.00
+CC     CA     CT     HC          0.1560  3     0.00
+CC     NB     CB     N2          4.7500  2   180.00
+CC     NB     CB     NA          4.1500  2   180.00
+CK     NG     CB     CB          0.6250  2   180.00
+CK     NG     CB     NC          0.6250  2   180.00
+CK     NG     CT     H2          0.1560  3     0.00
+CK     N2     CB     CB          2.0000  2   180.00
+CK     N2     CB     N2          2.0000  2   180.00
+CK     N2     CB     NA          0.3000  2   180.00
+CK     N2     CT     H2          0.3000  3     0.00
+CK     NB     CB     C           4.1500  2   180.00
+CK     NB     CB     CA          4.7500  2   180.00
+CK     NB     CB     CB          4.7500  2   180.00
+CK     NB     CB     CM          4.7500  2   180.00
+CM     C      NG     CT          1.4500  2   180.00
+CM     C      NA     H           2.0000  2   180.00
+CM     CG     CA     H4          4.0000  2   180.00
+CM     CB     CB     NC          4.0000  2   180.00
+CM     CM     C      H4          2.1750  2   180.00
+CM     CM     C      O           2.1750  2   180.00
+CM     CM     C      O           0.3000  3     0.00
+CM     CM     CM     H4          4.0000  2   180.00
+CM     CM     CT     C           0.3000  3     0.00
+CM     CM     CT     H1          0.0000  2     0.00
+CM     CM     CT     HC          0.3800  3   180.00
+CM     CM     CT     HC          1.1500  1     0.00
+CM     CM     CT     NT          0.0000  2     0.00
+CM     CM     CT     OH          0.0000  2     0.00
+CM     CM     NG     CT          0.6250  2   180.00
+CM     CM     NA     H           0.6250  2   180.00
+CM     CM     OH     HO          1.0500  2   180.00
+CM     CM     OS     CT          1.0500  2   180.00
+CM     CT     C      N           0.0000  2   180.00
+CM     CT     C      O           0.3000  3     0.00
+CM     CT     C      OS          0.3000  3     0.00
+CM     CT     CT     CT          0.1560  3     0.00
+CM     CT     CT     H1          0.1560  3     0.00
+CM     CT     NT     CT          0.3000  3     0.00
+CM     CT     NT     H           0.3000  3     0.00
+CM     CT     OH     HO          0.1670  3     0.00
+CM     NG     CT     H1          0.0000  2     0.00
+CM     NG     CT     H2          0.1560  3     0.00
+CM     N2     CA     H5          1.0500  2   180.00
+CM     N2     CA     N2          1.0500  2   180.00
+CM     N2     CA     NC          1.0500  2   180.00
+CM     N2     CT     H1          0.3000  3     0.00
+CM     N2     CT     H2          0.3000  3     0.00
+CM     OS     CT     C           0.3830  3     0.00
+CM     OS     CT     H1          0.3830  3     0.00
+CQ     S      CT     H1          0.3330  3     0.00
+CR     NG     CB     C           0.6250  2   180.00
+CR     NG     CB     CB          0.6250  2   180.00
+CR     NG     CT     H1          0.1560  3     0.00
+CR     N2     CB     CB          1.0500  2   180.00
+CR     N2     CB     NC          1.0500  2   180.00
+CR     N2     CT     H2          0.3000  3     0.00
+CT     C      N      H           2.5000  2   180.00
+CT     C      OH     HO          2.3000  2   180.00
+CT     C      OS     CT          2.7000  2   180.00
+CT     CG     CA     H4          6.6500  2   180.00
+CT     CC     CA     CT          6.6500  2   180.00
+CT     CC     CA     H4          6.6500  2   180.00
+CT     CM     C      NG          2.1750  2   180.00
+CT     CM     C      NA          2.1750  2   180.00
+CT     CM     C      O           2.1750  2   180.00
+CT     CM     CM     CT          6.6500  2   180.00
+CT     CM     CM     CT          1.9000  1   180.00
+CT     CM     CM     H4          6.6500  2   180.00
+CT     CM     CM     HA          6.6500  2   180.00
+CT     CM     CM     NG          6.6500  2   180.00
+CT     CM     CM     NA          6.6500  2   180.00
+CT     CM     CT     H1          0.0000  2     0.00
+CT     CM     CT     HC          0.0000  2     0.00
+CT     CM     CT     OH          0.0000  2     0.00
+CT     CT     C      O           0.0000  2   180.00
+CT     CT     C      OS          0.0000  2   180.00
+CT     CT     CM     C           0.3000  3     0.00
+CT     CT     CM     CM          0.3000  3     0.00
+CT     CT     CM     HA          0.0000  2     0.00
+CT     CT     CT     CT          0.1800  3     0.00
+CT     CT     CT     CT          0.2500  2   180.00
+CT     CT     CT     CT          0.2000  1   180.00
+CT     CT     CT     H1          0.1560  3     0.00
+CT     CT     CT     H2          0.1560  3     0.00
+CT     CT     CT     HC          0.1600  3     0.00
+CT     CT     CT     HP          0.1560  3     0.00
+CT     CT     CT     N           0.1560  3     0.00
+CT     CT     CT     N3          0.1560  3     0.00
+CT     CT     CT     NT          0.1560  3     0.00
+CT     CT     CT     O           0.1560  3     0.00
+CT     CT     CT     OH          0.1560  3     0.00
+CT     CT     N      H           0.0000  2     0.00
+CT     CT     NG     CA          0.3000  3     0.00
+CT     CT     NG     CB          0.3000  3     0.00
+CT     CT     NG     CK          0.3000  3     0.00
+CT     CT     NG     CM          0.3000  3     0.00
+CT     CT     N2     CA          0.3000  3     0.00
+CT     CT     N2     CB          0.3000  3     0.00
+CT     CT     N2     CK          0.3000  3     0.00
+CT     CT     N2     CM          0.3000  3     0.00
+CT     CT     N2     CR          0.3000  3     0.00
+CT     CT     N3     H           0.1560  3     0.00
+CT     CT     NT     H           0.3000  3     0.00
+CT     CT     OH     HO          0.1600  3     0.00
+CT     CT     OH     HO          0.2500  1     0.00
+CT     CT     OS     CT          0.3830  3     0.00
+CT     CT     OS     CT          0.1000  2   180.00
+CT     CT     SO     O           0.3330  3     0.00
+CT     N      C      N           2.5000  2   180.00
+CT     N      C      O           2.5000  2   180.00
+CT     N      C      OS          2.5000  2   180.00
+CT     N      CT     CT          0.3000  3     0.00
+CT     N      CT     H1          0.1560  3     0.00
+CT     N      CT     H2          0.1560  3     0.00
+CT     NG     C      NG          1.4500  2   180.00
+CT     NG     C      NA          0.3500  4   180.00
+CT     NG     C      NC          2.0000  2   180.00
+CT     NG     C      O           0.3500  4   180.00
+CT     NG     CA     CG          0.6250  2   180.00
+CT     NG     CA     H4          0.6250  2   180.00
+CT     NG     CA     NA          0.6250  2   180.00
+CT     NG     CA     NC          0.6250  2   180.00
+CT     NG     CA     SS          0.6250  2   180.00
+CT     NG     CB     CB          0.6250  2   180.00
+CT     NG     CB     NC          0.6250  2   180.00
+CT     NG     CK     H5          0.6250  2   180.00
+CT     NG     CK     NB          0.6250  2   180.00
+CT     NG     CM     H4          0.6250  2   180.00
+CT     NG     CR     H5          0.6250  2   180.00
+CT     N2     CA     CM          0.3000  2   180.00
+CT     N2     CA     N2          0.3000  2   180.00
+CT     N2     CA     NC          0.3000  2   180.00
+CT     N2     CB     CB          2.0000  2   180.00
+CT     N2     CB     N2          2.0000  2   180.00
+CT     N2     CB     NA          0.3000  2   180.00
+CT     N2     CB     NC          0.3000  2   180.00
+CT     N2     CK     H5          2.0000  2   180.00
+CT     N2     CK     NB          2.0000  2   180.00
+CT     N2     CM     CM          0.3000  2   180.00
+CT     N2     CM     H4          0.3000  2   180.00
+CT     N2     CR     H5          0.3000  2   180.00
+CT     N2     CR     NG          0.3000  2   180.00
+CT     N2     CT     H1          0.3000  3     0.00
+CT     NT     CT     C           0.3000  3     0.00
+CT     NT     CT     CT          0.3000  3     0.00
+CT     NT     CT     CT          0.4800  2   180.00
+CT     NT     CT     H1          0.3000  3     0.00
+CT     OS     C      O           2.7000  2   180.00
+CT     OS     C      O           1.4000  1   180.00
+CT     OS     CT     CM          0.3830  3     0.00
+CT     OS     CT     H1          0.3830  3     0.00
+CT     OS     CT     H2          0.3830  3     0.00
+CT     OS     CT     N           0.3830  3     0.00
+CT     OS     CT     NG          0.3830  3     0.00
+CT     OS     CT     NG          0.6500  2     0.00
+CT     OS     CT     N2          0.3830  3     0.00
+CT     OS     CT     OS          0.1000  3     0.00
+CT     OS     CT     OS          0.8500  2   180.00
+CT     OS     CT     OS          1.3500  1   180.00
+CT     OS     P      OH          0.2500  3     0.00
+CT     OS     P      OH          1.2000  2     0.00
+CZ     CG     CA     H4          6.6500  2   180.00
+CZ     CM     CT     HC          0.0000  2     0.00
+H      N      C      O           2.5000  2   180.00
+H      N      C      O           2.0000  1     0.00
+H      N      CT     H1          0.0000  2     0.00
+H      NG     C      CT          0.3500  4   180.00
+H      NG     C      N           1.4500  2   180.00
+H      NG     C      O           0.3500  4   180.00
+H      NG     CA     CM          0.6250  2   180.00
+H      NG     CA     NC          0.6250  2   180.00
+H      N2     CA     CM          0.3000  2   180.00
+H      N2     CA     N2          0.0000  4     0.00
+H      N2     CA     N2          2.4000  2   180.00
+H      N2     CA     NC          0.3000  2   180.00
+H      N2     CM     CM          0.3000  2   180.00
+H      N2     CM     CT          0.3000  2   180.00
+H      N2     CM     CZ          0.3000  2   180.00
+H      N2     CM     N2          0.3000  2   180.00
+H      N2     CT     CM          0.3000  3     0.00
+H      N2     CT     CT          0.3000  3     0.00
+H      N2     CT     H1          0.3000  3     0.00
+H      N3     CT     C           0.1560  3     0.00
+H      NT     CM     N           0.3000  2   180.00
+H      NT     CT     H1          0.3000  3     0.00
+H1     CT     C      O           0.8000  1     0.00
+H1     CT     C      O           0.0000  2     0.00
+H1     CT     C      O           0.0800  3   180.00
+H1     CT     C      OS          0.1560  3     0.00
+H1     CT     CM     HA          0.0000  2     0.00
+H1     CT     CT     H1          0.1560  3     0.00
+H1     CT     CT     H2          0.1560  3     0.00
+H1     CT     CT     HC          0.1560  3     0.00
+H1     CT     CT     N           0.1560  3     0.00
+H1     CT     CT     NG          0.1560  3     0.00
+H1     CT     CT     N2          0.1560  3     0.00
+H1     CT     CT     O           0.1560  3     0.00
+H1     CT     SO     O           0.3330  3     0.00
+H4     CM     CM     HA          6.6500  2   180.00
+H4     CM     CM     OH          6.6500  2   180.00
+H4     CM     CM     OS          6.6500  2   180.00
+H4     CM     NA     H           0.6250  2   180.00
+H5     CA     NG     CT          0.6250  2   180.00
+H5     CA     N2     CT          0.3000  2   180.00
+H5     CA     NA     H           0.6250  2   180.00
+HA     CM     CM     HA          6.6500  2   180.00
+HC     CT     C      N           0.1560  3     0.00
+HC     CT     C      O           0.8000  1     0.00
+HC     CT     C      O           0.0000  2     0.00
+HC     CT     C      O           0.0800  3   180.00
+HC     CT     C      OS          0.1560  3     0.00
+HC     CT     CC     CA          0.1560  3     0.00
+HC     CT     CT     HC          0.1500  3     0.00
+HC     CT     CT     NT          0.1560  3     0.00
+HC     CT     CT     OH          0.0000  3     0.00
+HC     CT     CT     OH          0.2500  1     0.00
+HO     OH     C      O           2.3000  2   180.00
+HO     OH     C      O           1.9000  1     0.00
+HO     OH     CT     H1          0.1670  3     0.00
+HO     OH     P      O2          0.7000  1     0.00
+HP     CT     C      O           0.0000  2   180.00
+HP     CT     CT     HC          0.1560  3     0.00
+HP     CT     N3     H           0.1560  3     0.00
+N      C      CT     CT          0.0000  4     0.00
+N      C      CT     CT          0.4000  3     0.00
+N      C      CT     CT          0.2000  2     0.00
+N      C      CT     CT          0.2000  1     0.00
+N      C      N      C           2.5000  2   180.00
+N      C      N      H           2.5000  2   180.00
+N      C      NG     CT          0.3500  4   180.00
+N      C      OS     CT          2.7000  2   180.00
+N      CT     C      O           0.3000  3     0.00
+N      CT     C      OH          0.0000  2   180.00
+N      CT     CT     C           0.1560  3     0.00
+N      CT     CT     HC          0.1560  3     0.00
+N      CT     CT     OH          0.0000  1     0.00
+N      CT     CT     OH          1.4900  2     0.00
+N      CT     CT     OH          0.1560  3     0.00
+N      CT     CT     OH          0.0000  4     0.00
+NG     C      CB     CB          2.1750  2   180.00
+NG     C      CM     CM          2.1750  2   180.00
+NG     C      CM     HA          2.1750  2   180.00
+NG     C      CT     HC          0.0000  2   180.00
+NG     C      N      CT          2.5000  2   180.00
+NG     C      N      H           2.5000  2   180.00
+NG     C      NG     CM          0.3500  4   180.00
+NG     C      NA     CM          2.0000  2   180.00
+NG     C      NA     H           2.0000  2   180.00
+NG     C      NC     CA          4.1500  2   180.00
+NG     CA     CG     CB          6.6500  2   180.00
+NG     CA     CG     CM          6.6500  2   180.00
+NG     CA     CG     CT          6.6500  2   180.00
+NG     CA     CG     CZ          6.6500  2   180.00
+NG     CA     CB     CB          6.6500  2   180.00
+NG     CA     CC     CT          6.6500  2   180.00
+NG     CA     CC     NB          6.6500  2   180.00
+NG     CA     CM     CM          6.6500  2   180.00
+NG     CA     CM     HA          6.6500  2   180.00
+NG     CA     CT     CT          0.3000  3     0.00
+NG     CA     CT     HC          0.3000  3     0.00
+NG     CA     N2     CB          0.3000  2   180.00
+NG     CA     N2     CM          0.3000  2   180.00
+NG     CA     N2     CT          0.3000  2   180.00
+NG     CA     N2     H           0.3000  2   180.00
+NG     CA     NA     C           0.6250  2   180.00
+NG     CA     NA     H           0.6250  2   180.00
+NG     CA     NC     CA          4.1500  2   180.00
+NG     CA     NC     CB          4.1500  2   180.00
+NG     CA     NC     CQ          4.1500  2   180.00
+NG     CB     C      NA          2.1750  2   180.00
+NG     CB     C      O           2.1750  2   180.00
+NG     CB     CB     C           6.6500  2   180.00
+NG     CB     CB     CG          6.6500  2   180.00
+NG     CB     CB     CA          6.6500  2   180.00
+NG     CB     CB     CM          6.6500  2   180.00
+NG     CB     CB     NB          6.6500  2   180.00
+NG     CB     N2     CB          2.0000  2   180.00
+NG     CB     N2     CT          2.0000  2   180.00
+NG     CB     NA     CB          0.6250  2   180.00
+NG     CB     NA     H           0.6250  2   180.00
+NG     CB     NB     CC          4.1500  2   180.00
+NG     CB     NC     CA          4.1500  2   180.00
+NG     CB     NC     CQ          4.1500  2   180.00
+NG     CK     NB     CB          4.1500  2   180.00
+NG     CM     CM     CA          6.6500  2   180.00
+NG     CM     CM     CM          6.6500  2   180.00
+NG     CM     CM     HA          6.6500  2   180.00
+NG     CM     CM     OH          6.6500  2   180.00
+NG     CM     CM     OS          6.6500  2   180.00
+NG     CM     N2     H           0.3000  2   180.00
+NG     CR     N2     CB          0.3000  2   180.00
+NG     CT     CT     CT          0.1560  3     0.00
+NG     CT     CT     HC          0.1560  3     0.00
+NG     CZ     CM     CT          0.0000  2   180.00
+NG     CZ     CM     N2          0.0000  2   180.00
+N2     CA     CB     CB          4.0000  2   180.00
+N2     CA     CM     C           6.6500  2   180.00
+N2     CA     CM     CM          4.0000  2   180.00
+N2     CA     CM     CT          6.6500  2   180.00
+N2     CA     CM     HA          6.6500  2   180.00
+N2     CA     NG     CT          0.6250  2   180.00
+N2     CA     NG     CZ          0.6250  2   180.00
+N2     CA     N2     CB          1.0500  2   180.00
+N2     CA     NA     H           0.6250  2   180.00
+N2     CA     NC     CB          4.8000  2   180.00
+N2     CA     NC     CM          4.8000  2   180.00
+N2     CA     NC     CQ          4.8000  2   180.00
+N2     CB     CB     C           6.6500  2   180.00
+N2     CB     CB     NG          6.6500  2   180.00
+N2     CB     CB     NB          4.0000  2   180.00
+N2     CB     N2     CA          1.0500  2   180.00
+N2     CB     N2     CB          2.0000  2   180.00
+N2     CB     NA     CB          0.6250  2   180.00
+N2     CB     NA     H           0.6250  2   180.00
+N2     CB     NC     CA          4.7500  2   180.00
+N2     CK     NB     CB          4.7500  2   180.00
+N2     CM     CB     CB          4.0000  2   180.00
+N2     CM     CM     CM          4.0000  2   180.00
+N2     CM     CM     HA          6.6500  2   180.00
+N2     CM     CT     HC          0.0000  2     0.00
+N2     CM     NG     CT          0.6250  2   180.00
+N2     CM     N2     CA          1.0500  2   180.00
+N2     CM     N2     CT          0.3000  2   180.00
+N2     CR     NG     CB          0.6250  2   180.00
+N2     CR     NG     CT          0.6250  2   180.00
+N2     CT     CM     CM          0.0000  2     0.00
+N2     CT     CM     HA          0.0000  2     0.00
+N2     CT     CT     CT          0.1560  3     0.00
+N2     CT     CT     HC          0.1560  3     0.00
+N3     CT     C      O           0.0000  2   180.00
+N3     CT     CT     HC          0.1560  3     0.00
+NA     C      CB     CB          2.1750  2   180.00
+NA     C      CM     CM          2.1750  2   180.00
+NA     C      CM     HA          2.1750  2   180.00
+NA     C      CM     OH          2.1750  2   180.00
+NA     C      CM     OS          2.1750  2   180.00
+NA     C      NG     CM          2.0000  2   180.00
+NA     C      NA     CM          2.0000  2   180.00
+NA     C      NA     H           2.0000  2   180.00
+NA     CA     NG     CM          0.6250  2   180.00
+NA     CA     N2     CT          0.3000  2   180.00
+NA     CA     N2     H           0.3000  2   180.00
+NA     CA     NC     CB          4.1500  2   180.00
+NA     CM     CM     CM          6.6500  2   180.00
+NA     CM     CM     HA          6.6500  2   180.00
+NB     CB     C      NG          2.1750  2   180.00
+NB     CB     C      NA          2.1750  2   180.00
+NB     CB     C      O           2.1750  2   180.00
+NB     CB     CA     NG          6.6500  2   180.00
+NB     CB     CA     N2          4.0000  2   180.00
+NB     CB     CA     NC          4.0000  2   180.00
+NB     CB     CB     NA          6.6500  2   180.00
+NB     CB     CB     NC          4.0000  2   180.00
+NB     CB     CM     N2          4.0000  2   180.00
+NB     CB     NG     CA          2.0000  2   180.00
+NB     CB     N2     CB          2.0000  2   180.00
+NB     CB     N2     CT          2.0000  2   180.00
+NB     CB     NA     CB          0.6250  2   180.00
+NB     CB     NA     H           0.6250  2   180.00
+NB     CC     CA     CT          6.6500  2   180.00
+NB     CC     CA     H4          4.0000  2   180.00
+NB     CC     CT     HC          0.3000  3     0.00
+NB     CK     NG     CB          0.6250  2   180.00
+NB     CK     N2     CB          2.0000  2   180.00
+NC     C      NG     CM          2.0000  2   180.00
+NC     CA     CB     CB          4.0000  2   180.00
+NC     CA     CM     C           6.6500  2   180.00
+NC     CA     CM     CM          4.0000  2   180.00
+NC     CA     CM     CT          6.6500  2   180.00
+NC     CA     CM     HA          6.6500  2   180.00
+NC     CA     NG     CM          0.6250  2   180.00
+NC     CA     NA     H           0.6250  2   180.00
+NC     CM     CM     CM          4.0000  2   180.00
+NC     CM     CM     HA          6.6500  2   180.00
+NC     CM     N2     H           0.3000  2   180.00
+NC     CQ     CT     HC          0.0000  2     0.00
+NC     CQ     NC     CB          4.7500  2   180.00
+NC     CQ     S      CT          1.1000  2   180.00
+NT     CM     N      H           0.6500  2   180.00
+NT     CT     C      O           0.0000  2   180.00
+NT     CT     CM     HA          0.0000  2     0.00
+NT     CT     CT     H1          0.1560  3     0.00
+NT     CT     CT     OH          0.1560  3     0.00
+NT     CT     CT     OS          0.1560  3     0.00
+NT     CT     CT     SO          0.1560  3     0.00
+O      C      CB     CB          2.1750  2   180.00
+O      C      CM     HA          2.1750  2   180.00
+O      C      CM     OH          2.1750  2   180.00
+O      C      CM     OS          2.1750  2   180.00
+O      C      CT     OH          0.0000  2   180.00
+O      C      NG     CB          2.0000  2   180.00
+O      C      NG     CM          2.0000  2   180.00
+O      C      NG     CZ          1.4500  2   180.00
+O      C      NA     CM          2.0000  2   180.00
+O      C      NA     H           2.0000  2   180.00
+O      C      NC     CA          4.1500  2   180.00
+O      P      OS     CT          1.0500  2   180.00
+O2     P      OS     CT          1.0500  2   180.00
+OH     C      CT     CT          0.0000  2   180.00
+OH     C      CT     H1          0.0000  2   180.00
+OH     CT     CM     HA          0.0000  2     0.00
+OH     CT     CT     CM          0.1560  3     0.00
+OH     CT     CT     H1          0.0000  3     0.00
+OH     CT     CT     H1          0.2500  1     0.00
+OH     CT     CT     H2          0.1560  3     0.00
+OH     CT     CT     NG          0.1560  3     0.00
+OH     CT     CT     N2          0.1560  3     0.00
+OH     CT     CT     OH          0.1440  3     0.00
+OH     CT     CT     OH          1.1750  2     0.00
+OS     C      CT     N           0.3000  3     0.00
+OS     C      CT     OH          0.0000  2   180.00
+OS     C      N      H           2.5000  2   180.00
+OS     CT     C      O           0.3000  3   180.00
+OS     CT     C      OS          0.0000  2   180.00
+OS     CT     CM     C           0.3000  3     0.00
+OS     CT     CM     CM          0.3000  3     0.00
+OS     CT     CT     CM          0.1560  3     0.00
+OS     CT     CT     CT          0.1560  3     0.00
+OS     CT     CT     H1          0.0000  3     0.00
+OS     CT     CT     H1          0.2500  1     0.00
+OS     CT     CT     H2          0.1560  3     0.00
+OS     CT     CT     NG          0.1560  3     0.00
+OS     CT     CT     O           0.1560  3     0.00
+OS     CT     CT     OH          0.1440  3     0.00
+OS     CT     CT     OH          1.1750  2     0.00
+OS     CT     CT     OS          0.1440  3     0.00
+OS     CT     CT     OS          1.1750  2     0.00
+OS     CT     N      C           0.3000  3     0.00
+OS     CT     N      CT          0.3000  3     0.00
+OS     CT     NG     C           0.3000  3     0.00
+OS     CT     NG     CA          0.3000  3     0.00
+OS     CT     NG     CB          0.3000  3     0.00
+OS     CT     NG     CK          0.0000  2     0.00
+OS     CT     NG     CK          2.5000  1     0.00
+OS     CT     NG     CM          0.0000  2     0.00
+OS     CT     NG     CM          2.5000  1     0.00
+OS     CT     N2     CA          0.3000  3     0.00
+OS     CT     N2     CB          0.3000  3     0.00
+OS     CT     N2     CK          0.3000  3     0.00
+OS     CT     N2     CM          0.3000  3     0.00
+OS     CT     N2     CR          0.3000  3     0.00
+OS     P      OH     HO          0.7000  1     0.00
+P      OS     CT     CT          0.3830  3     0.00
+P      OS     CT     H1          0.3830  3     0.00
+SO     CT     CT     H1          0.1560  3     0.00
+SS     CA     NG     CM          0.6250  2   180.00
+SS     CA     NA     C           0.6250  2   180.00
+SS     CA     NA     H           0.6250  2   180.00
+SS     CA     NC     CA          4.1500  2   180.00
+SS     CM     CM     CM          6.6500  2   180.00
+SS     CM     CM     HA          6.6500  2   180.00
+SS     CM     NA     H           0.6250  2   180.00
 X      C      C      X           3.6250  2   180.00
 X      C      CA     X           3.6250  2   180.00
 X      C      CB     X           3.0000  2   180.00
@@ -1090,18 +1882,10 @@ N      CX     C      N           0.0000  4     0.00
 N      CX     C      N           0.5500  3   180.00
 N      CX     C      N           1.5800  2   180.00
 N      CX     C      N           0.4500  1   180.00
-CT     CT     N      C           0.0000  4     0.00
-CT     CT     N      C           0.4000  3     0.00
-CT     CT     N      C           2.0000  2     0.00
-CT     CT     N      C           2.0000  1     0.00
 CT     CX     N      C           0.0000  4     0.00
 CT     CX     N      C           0.8000  3     0.00
 CT     CX     N      C           1.8000  2     0.00
 CT     CX     N      C           2.0000  1     0.00
-CT     CT     C      N           0.0000  4     0.00
-CT     CT     C      N           0.4000  3     0.00
-CT     CT     C      N           0.2000  2     0.00
-CT     CT     C      N           0.2000  1     0.00
 CT     CX     C      N           0.0000  4     0.00
 CT     CX     C      N           0.4000  3     0.00
 CT     CX     C      N           0.2000  2     0.00
@@ -1110,84 +1894,34 @@ CX     CT     C      N           0.0000  4     0.00
 CX     CT     C      N           0.4000  3     0.00
 CX     CT     C      N           0.2000  2     0.00
 CX     CT     C      N           0.2000  1     0.00
-H      N      C      O           2.5000  2   180.00
-H      N      C      O           2.0000  1     0.00
 CT     S      S      CT          3.5000  2     0.00
 CT     S      S      CT          0.6000  3     0.00
-OH     P      OS     CT          0.2500  3     0.00
-OH     P      OS     CT          1.2000  2     0.00
 OS     P      OS     CT          0.2500  3     0.00
 OS     P      OS     CT          1.2000  2     0.00
-H1     CT     C      O           0.8000  1     0.00
-H1     CT     C      O           0.0000  2     0.00
-H1     CT     C      O           0.0800  3   180.00
 H1     CX     C      O           0.8000  1     0.00
 H1     CX     C      O           0.0000  2     0.00
 H1     CX     C      O           0.0800  3   180.00
-HC     CT     C      O           0.8000  1     0.00
-HC     CT     C      O           0.0000  2     0.00
-HC     CT     C      O           0.0800  3   180.00
-HC     CT     CT     HC          0.1500  3     0.00
-HC     CT     CT     CT          0.1600  3     0.00
 HC     CT     CT     CX          0.1600  3     0.00
-HC     CT     CM     CM          0.3800  3   180.00
-HC     CT     CM     CM          1.1500  1     0.00
 HC     CT     CS     CS          0.3800  3   180.00
 HC     CT     CS     CS          1.1500  1     0.00
-HO     OH     CT     CT          0.1600  3     0.00
-HO     OH     CT     CT          0.2500  1     0.00
 HO     OH     CT     CX          0.1600  3     0.00
 HO     OH     CT     CX          0.2500  1     0.00
-HO     OH     C      O           2.3000  2   180.00
-HO     OH     C      O           1.9000  1     0.00
-CM     CM     C      O           2.1750  2   180.00
-CM     CM     C      O           0.3000  3     0.00
-CT     CM     CM     CT          6.6500  2   180.00
-CT     CM     CM     CT          1.9000  1   180.00
 CS     CS     C      O           2.1750  2   180.00
 CS     CS     C      O           0.3000  3     0.00
 CT     CS     CS     CT          6.6500  2   180.00
 CT     CS     CS     CT          1.9000  1   180.00
-CT     CT     CT     CT          0.1800  3     0.00
-CT     CT     CT     CT          0.2500  2   180.00
-CT     CT     CT     CT          0.2000  1   180.00
 CX     CT     CT     CT          0.1800  3     0.00
 CX     CT     CT     CT          0.2500  2   180.00
 CX     CT     CT     CT          0.2000  1   180.00
-CT     CT     NT     CT          0.3000  3     0.00
-CT     CT     NT     CT          0.4800  2   180.00
-CT     CT     OS     CT          0.3830  3     0.00
-CT     CT     OS     CT          0.1000  2   180.00
 CT     CT     OS     C           0.3830  3     0.00
 CT     CT     OS     C           0.8000  1   180.00
-CT     OS     CT     OS          0.1000  3     0.00
-CT     OS     CT     OS          0.8500  2   180.00
-CT     OS     CT     OS          1.3500  1   180.00
-CT     OS     CT     NG          0.3830  3     0.00
-CT     OS     CT     NG          0.6500  2     0.00
 CT     CZ     CZ     HZ          0.0000  1     0.00
-O      C      OS     CT          2.7000  2   180.00
-O      C      OS     CT          1.4000  1   180.00
-OS     CT     NG     CK          0.0000  2     0.00
-OS     CT     NG     CK          2.5000  1     0.00
-OS     CT     NG     CM          0.0000  2     0.00
-OS     CT     NG     CM          2.5000  1     0.00
-OS     CT     CT     OS          0.1440  3     0.00
-OS     CT     CT     OS          1.1750  2     0.00
-OS     CT     CT     OH          0.1440  3     0.00
-OS     CT     CT     OH          1.1750  2     0.00
-OH     CT     CT     OH          0.1440  3     0.00
-OH     CT     CT     OH          1.1750  2     0.00
 F      CT     CT     F           0.0000  3     0.00
 F      CT     CT     F           1.2000  1   180.00
 CL     CT     CT     CL          0.0000  3     0.00
 CL     CT     CT     CL          0.4500  1   180.00
 BR     CT     CT     BR          0.0000  3     0.00
 BR     CT     CT     BR          0.0000  1   180.00
-H1     CT     CT     OS          0.0000  3     0.00
-H1     CT     CT     OS          0.2500  1     0.00
-H1     CT     CT     OH          0.0000  3     0.00
-H1     CT     CT     OH          0.2500  1     0.00
 H1     CX     CT     OH          0.0000  3     0.00
 H1     CX     CT     OH          0.2500  1     0.00
 H1     CT     CT     F           0.0000  3     0.00
@@ -1198,8 +1932,6 @@ H1     CT     CT     BR          0.0000  3     0.00
 H1     CT     CT     BR          0.5500  1     0.00
 HC     CT     CT     OS          0.0000  3     0.00
 HC     CT     CT     OS          0.2500  1     0.00
-HC     CT     CT     OH          0.0000  3     0.00
-HC     CT     CT     OH          0.2500  1     0.00
 HC     CT     CT     F           0.0000  3     0.00
 HC     CT     CT     F           0.1900  1     0.00
 HC     CT     CT     CL          0.0000  3     0.00
@@ -1221,10 +1953,6 @@ H4     CM     OS     EP          0.0000  2   180.00
 CS     CS     OS     EP          0.0000  2   180.00
 HA     CS     OS     EP          0.0000  2   180.00
 H4     CS     OS     EP          0.0000  2   180.00
-N      CT     CT     OH          0.0000  1     0.00
-N      CT     CT     OH          1.4900  2     0.00
-N      CT     CT     OH          0.1560  3     0.00
-N      CT     CT     OH          0.0000  4     0.00
 EP     S      S      CT          0.0000  3     0.00
 EP     S      S      EP          0.0000  3     0.00
 C8     CX     N      C           0.0000  4     0.00
@@ -1322,8 +2050,6 @@ C8     C8     C8     C8          0.2000  1   180.00
 C8     C8     C8     N3          0.1556  3     0.00
 C8     N2     CA     N2          0.0000  4     0.00
 C8     N2     CA     N2          2.4000  2   180.00
-H      N2     CA     N2          0.0000  4     0.00
-H      N2     CA     N2          2.4000  2   180.00
 C8     C8     N3     H           0.1556  3     0.00
 C      CX     2C     SH          0.0750  4     0.00
 C      CX     2C     SH          0.2510  3     0.00
@@ -1591,138 +2317,224 @@ CX     2C     S      S           0.0560  1     0.00
 2C     S      S      2C          0.4200  1     0.00
 
 IMPROPERS
-2C     CA     CA     CA          1.1000  2   180.00
 2C     O      C      OH         10.5000  2   180.00
 BR     CA     CA     CA          1.1000  2   180.00
+C      C      N      H           1.1000  2   180.00
 C      C4     C4     CT          1.1000  2   180.00
 C      C4     NG     CT          1.0000  2   180.00
-C      CB     CB     NB          0.0000  2   180.00
+C      CA     CM     CM          1.1000  2   180.00
+C      CA     NA     H           1.1000  2   180.00
+C      CA     NG     CB          1.1000  2   180.00
+C      CB     CB     NB          1.1000  2   180.00
+C      CB     CB     NG          1.1000  2   180.00
 C      CM     CM     CT          1.1000  2   180.00
+C      CM     CM     HA          1.1000  2   180.00
+C      CM     CM     OH          1.1000  2   180.00
+C      CM     CM     OS          1.1000  2   180.00
 C      CM     NG     CT          1.0000  2   180.00
 C      CS     CM     CT          1.1000  2   180.00
 C      CS     CS     CT          1.1000  2   180.00
 C      CS     NG     CT          1.0000  2   180.00
+C      CG     CB     CB          1.1000  2   180.00
+C      CT     N      CT          1.1000  2   180.00
 C      CT     N      H           1.1000  2   180.00
 C      CT     N      O           1.1000  2   180.00
 C      CX     N      H           1.1000  2   180.00
+C      H      N      H           1.1000  2   180.00
 C4     N2     CA     NC          1.1000  2   180.00
-CB     C5     NG     CT          1.0000  2   180.00
 CA     CA     C      OH          1.1000  2   180.00
 CA     CA     C      OS          1.1000  2   180.00
+CA     CA     CA     2C          1.1000  2   180.00
 CA     CA     CA     CT          1.1000  2   180.00
 CA     CA     CA     OH          1.1000  2   180.00
-CA     CB     CB     NB          0.0000  2   180.00
-CA     CB     CN     NA          0.0000  2   180.00
+CA     CB     CB     NB          1.1000  2   180.00
+CA     CB     CG     CM          1.1000  2   180.00
+CA     CB     CG     CT          1.1000  2   180.00
+CA     CB     CG     CZ          1.1000  2   180.00
+CA     CB     N2     CT          1.1000  2   180.00
+CA     CB     NG     CT          1.1000  2   180.00
+CA     CM     CM     CT          1.1000  2   180.00
+CA     CM     CM     HA          1.1000  2   180.00
+CA     CT     CC     NB          1.1000  2   180.00
+CA     H      N2     H           1.1000  2   180.00
+CA     H      N2     HO          1.1000  2   180.00
+CB     C5     NG     CT          1.0000  2   180.00
+CB     CB     N2     CT          1.1000  2   180.00
+CB     CB     NA     H           1.1000  2   180.00
+CB     CK     N2     CT          1.1000  2   180.00
+CB     CK     NB     CT          1.1000  2   180.00
 CB     CK     NG     CT          1.0000  2   180.00
+CB     CM     CB     NB          1.1000  2   180.00
 CB     CP     NG     CT          1.0000  2   180.00
+CB     CR     N2     CT          1.1000  2   180.00
+CB     CR     NG     CT          1.1000  2   180.00
 CB     CT     CG     CW          1.1000  2   180.00
 CB     N2     CA     NC          1.1000  2   180.00
-CB     NC     CB     NG          0.0000  2   180.00
-CC     CR     NA     P           1.1000  2   180.00
+CB     N2     CB     N2          1.1000  2   180.00
+CB     N2     CB     NB          1.1000  2   180.00
+CB     N2     CB     NC          1.1000  2   180.00
+CB     N2     CM     N2          1.1000  2   180.00
+CB     NA     C      O           1.1000  2   180.00
+CB     NA     CB     NB          1.1000  2   180.00
+CB     NG     C      O           1.1000  2   180.00
+CB     NG     CA     NC          1.1000  2   180.00
+CB     NG     CB     NC          1.1000  2   180.00
+CC     CT     CA     NG          1.1000  2   180.00
+CC     H4     CA     NG          1.1000  2   180.00
+CM     CM     CM     HA          1.1000  2   180.00
+CM     CT     CM     CT          1.1000  2   180.00
 CM     CT     CM     HA          1.1000  2   180.00
+CM     H      N      NT          1.1000  2   180.00
 CM     H4     C      O           1.1000  2   180.00
+CM     H4     CM     N2          1.1000  2   180.00
+CM     H4     CM     NA          1.1000  2   180.00
+CM     H4     CM     NG          1.1000  2   180.00
 CM     N2     CA     NC          1.1000  2   180.00
+CM     N2     CM     NC          1.1000  2   180.00
+CM     NA     C      O           1.1000  2   180.00
+CM     NA     CM     SS          1.1000  2   180.00
+CM     NG     C      O           1.1000  2   180.00
+CM     NG     CA     NC          1.1000  2   180.00
+CM     NG     CM     N2          1.1000  2   180.00
+CR     CC     NA     P           1.1000  2   180.00
 CS     CT     CS     HA          1.1000  2   180.00
 CS     H4     C      O           1.1000  2   180.00
 CS     N2     CA     NC          1.1000  2   180.00
-CA     CN     CB     CG          0.0000  2   180.00
-X      CT     N      CT          1.0000  2   180.00
+CG     CN     CB     CA          0.0000  2   180.00
+CG     H4     CA     NG          1.1000  2   180.00
+CG     N      CM     NT          1.1000  2   180.00
 CT     CV     CC     NA          1.1000  2   180.00
 CT     CW     CC     NA          1.1000  2   180.00
 CT     CW     CC     NB          1.1000  2   180.00
-X      CT     N      CX          1.0000  2   180.00
-CT     H1     CJ     H1          0.0000  2   180.00
-CT     H1     CJ     OH          0.0000  2   180.00
-CT     H1     CJ     OS          0.0000  2   180.00
+CT     CZ     CM     N2          1.1000  2   180.00
+CT     N      C      O           1.1000  2   180.00
+CT     NC     CQ     NC          1.1000  2   180.00
+CT     NG     C      O           1.1000  2   180.00
+CT     O      C      O           1.1000  2   180.00
 CT     O      C      OH         10.5000  2   180.00
-X      X      N      H           1.0000  2   180.00
-X      X      N2     H           1.0000  2   180.00
-X      X      NA     H           1.0000  2   180.00
-H1     H1     CJ     OH          0.0000  2   180.00
-H1     H1     CJ     OS          0.0000  2   180.00
-X      X      C4     H4          1.1000  2   180.00
-X      X      CA     H4          1.1000  2   180.00
-X      X      CM     H4          1.1000  2   180.00
-X      X      CS     H4          1.1000  2   180.00
-X      X      CV     H4          1.1000  2   180.00
-X      X      CW     H4          1.1000  2   180.00
+CT     O      C      OS          1.1000  2   180.00
+H1     H1     CJ     CT          0.0000  2   180.00
+H5     N2     CA     NC          1.1000  2   180.00
+H5     N2     CK     NB          1.1000  2   180.00
+H5     NA     CA     NC          1.1000  2   180.00
+H5     NB     CK     NB          1.1000  2   180.00
+H5     NC     CQ     NC          1.1000  2   180.00
+H5     NG     CA     NC          1.1000  2   180.00
+H5     NG     CK     NB          1.1000  2   180.00
+H5     NG     CR     N2          1.1000  2   180.00
 H5     O      C      OH          1.1000  2   180.00
 H5     O      C      OS          1.1000  2   180.00
+N      N      C      O           1.1000  2   180.00
+N      NG     C      O           1.1000  2   180.00
+N      O      C      OS          1.1000  2   180.00
+N2     N2     CA     NC          1.1000  2   180.00
+N2     NA     CA     NC          1.1000  2   180.00
+NA     CA     CN     CB          0.0000  2   180.00
+NA     NA     C      O           1.1000  2   180.00
+NB     C      CB     CB          0.0000  2   180.00
+NB     CA     CB     CB          0.0000  2   180.00
+NC     NC     CQ     S           1.1000  2   180.00
+NG     CB     CB     NC          0.0000  2   180.00
+NG     N2     CA     N2          1.1000  2   180.00
+NG     N2     CA     NC          1.1000  2   180.00
+NG     N2     CB     NB          1.1000  2   180.00
+NG     NA     C      O           1.1000  2   180.00
+NG     NA     CA     SS          1.1000  2   180.00
+NG     NA     CB     NB          1.1000  2   180.00
+NG     NC     C      O           1.1000  2   180.00
+NG     NC     CA     SS          1.1000  2   180.00
+NG     NG     C      O           1.1000  2   180.00
+OH     H1     CJ     CT          0.0000  2   180.00
+OH     H1     CJ     H1          0.0000  2   180.00
+OS     H1     CJ     CT          0.0000  2   180.00
+OS     H1     CJ     H1          0.0000  2   180.00
+X      CT     N      CT          1.0000  2   180.00
+X      CT     N      CX          1.0000  2   180.00
+X      N2     CA     N2         10.5000  2   180.00
+X      O2     C      O2         10.5000  2   180.00
+X      O2     CO     O2         10.5000  2   180.00
+X      X      C      O          10.5000  2   180.00
+X      X      C4     H4          1.1000  2   180.00
+X      X      C4     HA          1.1000  2   180.00
 X      X      C5     H5          1.1000  2   180.00
+X      X      CA     H4          1.1000  2   180.00
 X      X      CA     H5          1.1000  2   180.00
+X      X      CA     HA          1.1000  2   180.00
 X      X      CK     H5          1.1000  2   180.00
+X      X      CM     H4          1.1000  2   180.00
+X      X      CM     HA          1.1000  2   180.00
 X      X      CP     H5          1.1000  2   180.00
 X      X      CQ     H5          1.1000  2   180.00
 X      X      CR     H5          1.1000  2   180.00
-X      X      C4     HA          1.1000  2   180.00
-X      X      CA     HA          1.1000  2   180.00
-X      X      CM     HA          1.1000  2   180.00
+X      X      CS     H4          1.1000  2   180.00
 X      X      CS     HA          1.1000  2   180.00
-X      N2     CA     N2         10.5000  2   180.00
-N2     NA     CA     NC          1.1000  2   180.00
-X      X      C      O          10.5000  2   180.00
-X      O2     C      O2         10.5000  2   180.00
-X      O2     CO     O2         10.5000  2   180.00
+X      X      CV     H4          1.1000  2   180.00
+X      X      CW     H4          1.1000  2   180.00
+X      X      N      H           1.0000  2   180.00
+X      X      N2     H           1.0000  2   180.00
+X      X      NA     H           1.0000  2   180.00
 
 NONBONDED  nbxmod  5 atom cdiel fshift vatom vdistance vfswitch -
 cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 0.8333333333333334 wmin 1.5
 
 C            0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
+CG           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CA           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CB           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CC           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
-CD           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
-CI           0.000000  -0.109400       1.908000  0.000000  -0.054700       1.908000
 CK           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
-CP           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CM           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
-CS           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
-CN           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CQ           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CR           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CT           0.000000  -0.109400       1.908000  0.000000  -0.054700       1.908000
+CZ           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
+H            0.000000  -0.015700       0.600000  0.000000  -0.007850       0.600000
+H1           0.000000  -0.015700       1.387000  0.000000  -0.007850       1.387000
+H2           0.000000  -0.015700       1.287000  0.000000  -0.007850       1.287000
+H4           0.000000  -0.015000       1.409000  0.000000  -0.007500       1.409000
+H5           0.000000  -0.015000       1.359000  0.000000  -0.007500       1.359000
+HA           0.000000  -0.015000       1.459000  0.000000  -0.007500       1.459000
+HC           0.000000  -0.015700       1.487000  0.000000  -0.007850       1.487000
+HO           0.000000  -0.000000       0.000000  0.000000  -0.000000       0.000000
+HP           0.000000  -0.015700       1.100000  0.000000  -0.007850       1.100000
+N            0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+NG           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+N2           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+N3           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+NA           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+NB           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+NC           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+NT           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+NY           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
+O            0.000000  -0.210000       1.661200  0.000000  -0.105000       1.661200
+O2           0.000000  -0.210000       1.661200  0.000000  -0.105000       1.661200
+OH           0.000000  -0.210400       1.721000  0.000000  -0.105200       1.721000
+OS           0.000000  -0.170000       1.683700  0.000000  -0.085000       1.683700
+P            0.000000  -0.200000       2.100000  0.000000  -0.100000       2.100000
+S            0.000000  -0.250000       2.000000  0.000000  -0.125000       2.000000
+SO           0.000000  -0.250000       2.000000  0.000000  -0.125000       2.000000
+SS           0.000000  -0.250000       2.000000  0.000000  -0.125000       2.000000
+CD           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
+CI           0.000000  -0.109400       1.908000  0.000000  -0.054700       1.908000
+CP           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
+CS           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
+CN           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CV           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CW           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
-CG           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 CX           0.000000  -0.109400       1.908000  0.000000  -0.054700       1.908000
 CY           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
-CZ           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 C5           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 C4           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 C0           0.000000  -0.459789       1.713100  0.000000  -0.229895       1.713100
-H            0.000000  -0.015700       0.600000  0.000000  -0.007850       0.600000
-HC           0.000000  -0.015700       1.487000  0.000000  -0.007850       1.487000
-H1           0.000000  -0.015700       1.387000  0.000000  -0.007850       1.387000
-H2           0.000000  -0.015700       1.287000  0.000000  -0.007850       1.287000
 H3           0.000000  -0.015700       1.187000  0.000000  -0.007850       1.187000
-HA           0.000000  -0.015000       1.459000  0.000000  -0.007500       1.459000
-H4           0.000000  -0.015000       1.409000  0.000000  -0.007500       1.409000
-H5           0.000000  -0.015000       1.359000  0.000000  -0.007500       1.359000
-HO           0.000000  -0.000000       0.000000  0.000000  -0.000000       0.000000
 HS           0.000000  -0.015700       0.600000  0.000000  -0.007850       0.600000
-HP           0.000000  -0.015700       1.100000  0.000000  -0.007850       1.100000
 HZ           0.000000  -0.015000       1.459000  0.000000  -0.007500       1.459000
 F            0.000000  -0.061000       1.750000  0.000000  -0.030500       1.750000
 CL           0.000000  -0.265000       1.948000  0.000000  -0.132500       1.948000
 BR           0.000000  -0.320000       2.220000  0.000000  -0.160000       2.220000
 I            0.000000  -0.400000       2.350000  0.000000  -0.200000       2.350000
 MG           0.000000  -0.894700       0.792600  0.000000  -0.447350       0.792600
-N            0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-NA           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-NB           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-NC           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-N2           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-N3           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-NT           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-NG           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-NY           0.000000  -0.170000       1.824000  0.000000  -0.085000       1.824000
-O            0.000000  -0.210000       1.661200  0.000000  -0.105000       1.661200
-O2           0.000000  -0.210000       1.661200  0.000000  -0.105000       1.661200
-OH           0.000000  -0.210400       1.721000  0.000000  -0.105200       1.721000
-OS           0.000000  -0.170000       1.683700  0.000000  -0.085000       1.683700
 OP           0.000000  -0.170000       1.850000  0.000000  -0.085000       1.850000
-P            0.000000  -0.200000       2.100000  0.000000  -0.100000       2.100000
-S            0.000000  -0.250000       2.000000  0.000000  -0.125000       2.000000
 SH           0.000000  -0.250000       2.000000  0.000000  -0.125000       2.000000
 CO           0.000000  -0.086000       1.908000  0.000000  -0.043000       1.908000
 2C           0.000000  -0.109400       1.908000  0.000000  -0.054700       1.908000

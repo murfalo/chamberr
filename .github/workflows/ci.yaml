@@ -1,4 +1,4 @@
-# Continuous integration for Chamber
+# Continuous integration for Chamberr
 name: CI
 
 on:
@@ -17,15 +17,15 @@ jobs:
     runs-on: macos-13
 
     steps:
-    - name: Check out the Chamber repository
+    - name: Check out the Chamberr repository
       uses: actions/checkout@v3
 
-    - name: Set up chamber conda environment
+    - name: Set up chamberr conda environment
       uses: conda-incubator/setup-miniconda@v3
       with:
         auto-update-conda: true
         environment-file: environment.yaml
-        activate-environment: chamber
+        activate-environment: chamberr
         miniconda-version: "latest"
 
     - name: Initialize conda
@@ -38,23 +38,23 @@ jobs:
     - name: Configure ParmEd
       shell: bash -l {0}
       run: |
-        conda activate chamber
+        conda activate chamberr
         git clone https://github.com/murfalo/ParmEd
         cd ParmEd
         bash -ex devtools/ci/install.sh
         pip install .
 
-    - name: Configure Chamber
+    - name: Configure Chamberr
       shell: bash -l {0}
       run: |
-        conda activate chamber
+        conda activate chamberr
         pip install .
-        chamber -h
+        chamberr -h
 
     - name: Run unit tests
       shell: bash -l {0}
       run: |
-        conda activate chamber
+        conda activate chamberr
         # Save time by running as many tests in parallel as possible
         rm -r ParmEd
         pytest
